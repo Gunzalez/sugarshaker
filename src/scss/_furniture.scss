@@ -7,7 +7,6 @@
 }
 
 body {
-    font-family: $bodyFont;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: none;
@@ -36,6 +35,8 @@ body {
 h1, h2, h3, h4, h5 {
     padding: 0;
     margin: 0;
+    font-family: 'CaeciliaLTStd-Bold';
+    color: $brand-green;
 }
 
 h1 {
@@ -119,26 +120,6 @@ form {
             input::placeholder {
                 color: #ffffff;
             }
-        }
-    }
-
-    .btn-ma {
-        padding: 10px 18px;
-        color: $brand-gray-darker;
-        background: $brand-green-dark;
-        border-color: $brand-green-dark;
-        border-radius: 0;
-        text-transform: uppercase;
-        font-size: 20px;
-        width: 100%;
-
-        &:hover {
-            background: $brand-green-light;
-            border-color: $brand-green-light;
-        }
-
-        @media (min-width: $breakpoint3){
-            width: auto;
         }
     }
 
