@@ -18,72 +18,21 @@ body {
 }
 
 .page {
-    max-width: 1920px;
+    max-width: 1220px;
     margin: 0 auto;
 }
 
 .copy {
-    padding: 15px 0;
-    position: relative;
-
-    @media (min-width: $breakpoint2){
-        padding: 30px 0;
-    }
 }
 
 
 h1, h2, h3, h4, h5 {
-    padding: 0;
-    margin: 0;
     font-family: 'CaeciliaLTStd-Bold';
-    color: $brand-green;
 }
 
-h1 {
-    font-size: 26px;
+h1 {}
 
-    @media (min-width: $breakpoint2){
-        font-size: 54px;
-    }
-}
-
-h2 {
-    font-size: 28px;
-    padding-bottom: 12px;
-    padding-top: 5px;
-
-    @media (min-width: $breakpoint2){
-        font-size: 32px;
-    }
-}
-
-h3 {
-    font-size: 25px;
-    padding-bottom: 12px;
-    padding-top: 5px;
-}
-
-
-h4 {
-    font-size: 20px;
-    padding-bottom: 12px;
-    padding-top: 5px;
-    font-weight: bold;
-}
-
-p {
-    padding-bottom: 12px;
-    margin: 0;
-
-    &.sub-title {
-        font-size: 16px;
-        line-height: 20px;
-
-        @media (min-width: $breakpoint2){
-            font-size: 30px;
-        }
-    }
-}
+p {}
 
 .quote {
     text-transform: uppercase;
@@ -102,95 +51,6 @@ p {
     }
 }
 
-form {
-    margin: 30px 0;
-
-    .has-placeholder {
-        display: none;
-    }
-
-    @media (min-width: $breakpoint3){
-
-        .has-placeholder {
-            display: block;
-        }
-
-        .form-group {
-            textarea::placeholder,
-            input::placeholder {
-                color: #ffffff;
-            }
-        }
-    }
-
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    textarea {
-        width: 100%;
-        height: 200px !important;
-    }
-
-    select,
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    textarea {
-
-        &.form-control {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            height: inherit;
-            outline: none;
-            border-radius: 0;
-            background: #ffffff;
-            resize: none;
-            padding: 8px 10px 8px 12px;
-        }
-    }
-
-    select {
-        &.form-control {
-            background: url("../images/bg-select.png") right center no-repeat;
-            padding-right: 30px;
-        }
-    }
-}
-
-.form-check {
-
-    @media (min-width: $breakpoint3){
-
-        input + label {
-            padding-right: 80px;
-        }
-    }
-    margin-bottom: 1.5rem;
-}
-
-.error-span {
-    display: none;
-}
-
-.error {
-
-    select,
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    textarea {
-        border-color: #ff0000;
-        outline: 1px solid #ff0000 !important;
-    }
-
-    .error-span {
-        display: block;
-        color: #ff0000;
-    }
-}
-
 .visually-hidden {
     position: absolute;
     overflow: hidden;
@@ -201,9 +61,4 @@ form {
 
 .initial-display-none {
     display: none !important;
-}
-
-.hamburger.is-active:hover,
-.hamburger:hover {
-    opacity: 1.0;
 }
