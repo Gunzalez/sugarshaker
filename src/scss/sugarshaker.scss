@@ -2,8 +2,84 @@
 @import "furniture";
 @import "mixins";
 
-body {
+.header,
+.header-left,
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.header-image {
+    padding-left: 40px;
+
+    a {
+        display: block;
+    }
+}
+
+.hamburger {
+    background-image: url('../images/hamburger.svg');
+    width: 52px;
+    height: 39px;
+    text-indent: -9000px;
+    display: block;
+}
+
+
+
+
+
+.slogan {
+    font-family: 'CaeciliaLTStd-Italic';
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.page {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding-top: 30px;
     background: #ffffff;
-    color: $brand-green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------ utils -------------*/
+
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+.display-none {
+  display: none !important;
 }
 
