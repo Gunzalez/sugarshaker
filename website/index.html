@@ -26,8 +26,9 @@
 </head>
 <body>
     <div class="page">
-        <div class="header">
-            <div class="header-left">
+
+        <div id="header" class="header">
+            <div class="header-image-text">
                 <div class="header-image">
                     <a href="index.html">
                         <img src="images/logo-ss.png" alt="SugarShaker logo" />
@@ -35,10 +36,10 @@
                 </div>
                 <div class="header-text">
                     <h1><span>Sugar</span><span>Shaker</span></h1>
-                    <p class="slogan">digital marketing & web development</p>
+                    <p class="slogan">digital&nbsp;marketing & web&nbsp;development</p>
                 </div>
             </div>
-            <div class="header-right">
+            <div class="header-contact-nav">
                 <div class="contact-details">
                     <span class="call-us">
                         <a href="tel:">0844 800 7109</a>
@@ -53,10 +54,25 @@
             </div>
         </div>
 
+        <div class="content">
+
+            <div class="tabs-section">
+                <ul class="tabs">
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Engineering</a></li>
+                    <li class="active"><a href="#">Consultancy</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
 
 
     </div>
-<script src="js/vendor/jquery-3.3.1.slim.min.js"></script>
-<script src="js/sugarshaker.js"></script>
+
+    <script src="js/vendor/domready.js"></script>
+    <script src="js/sugarshaker.js"></script>
 </body>
 </html>

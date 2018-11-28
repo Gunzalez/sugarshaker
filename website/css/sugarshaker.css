@@ -44,34 +44,36 @@ h1, h2, h3, h4, h5 {
 h1 {
   line-height: 100%;
   color: #262825;
-  font-size: 55px;
+  font-size: 32px;
   padding-bottom: 5px; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 55px; } }
 
 a {
   color: #006699; }
 
-.header,
-.header-left,
-.header-right {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-
-.header-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 30px; }
+.page {
+  max-width: 1220px;
+  margin: 0 auto;
+  background: #ffffff;
+  position: relative; }
 
 .header-image {
-  padding-left: 40px; }
+  padding-bottom: 5px;
+  text-align: center; }
   .header-image a {
-    display: block; }
+    display: inline-block; }
+  .header-image img {
+    width: 110px;
+    display: block;
+    transition: 200ms; }
 
 .hamburger {
   background-image: url("../images/hamburger.svg");
-  width: 52px;
-  height: 39px;
+  background-size: cover;
+  width: 40px;
+  height: 30px;
   text-indent: -9000px;
   display: block; }
 
@@ -80,13 +82,70 @@ a {
   font-size: 20px;
   font-weight: 100;
   margin: 0;
-  padding: 0; }
+  padding: 0 0 10px 0;
+  line-height: 130%; }
 
-.page {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding-top: 30px;
+.header {
+  padding-top: 20px;
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  top: 0; }
+  .header.smaller {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16); }
+    .header.smaller .header-image img {
+      width: 70px; }
+
+.header-text {
+  text-align: center; }
+  .header-text h1 {
+    padding-bottom: 10px; }
+
+.content {
+  margin-top: 210px;
+  padding-top: 20px;
+  height: 1200px;
   background: #ffffff; }
+
+.navigation {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+
+.contact-details {
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+  .contact-details span {
+    display: block;
+    padding-bottom: 5px; }
+
+@media (min-width: 768px) {
+  .header,
+  .header-image-text,
+  .header-contact-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px; } }
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+  .tabs li {
+    display: inline; }
+  .tabs a {
+    display: inline-block;
+    padding: 0 5px;
+    color: #27893e; }
+  .tabs .active a {
+    font-weight: bold; }
 
 /* ------ utils -------------*/
 .visually-hidden {

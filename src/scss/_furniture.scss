@@ -27,8 +27,16 @@ h1, h2, h3, h4, h5 {
 h1 {
     line-height: 100%;
     color: $brand-black;
-    font-size: 55px;
+    font-size: 32px;
     padding-bottom: 5px;
+
+    @media (min-width: $breakpoint2) {
+        font-size: 55px;
+
+
+    }
+
+
 }
 
 p {}

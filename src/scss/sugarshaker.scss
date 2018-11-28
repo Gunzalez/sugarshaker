@@ -2,57 +2,145 @@
 @import "furniture";
 @import "mixins";
 
-.header,
-.header-left,
-.header-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-.header-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 30px;
+.page {
+    max-width: 1220px;
+    margin: 0 auto;
+    background: #ffffff;
+    position: relative;
 }
 
 .header-image {
-    padding-left: 40px;
+    padding-bottom: 5px;
+    text-align: center;
 
     a {
+        display: inline-block;
+    }
+
+    img {
+        width: 110px;
         display: block;
+        transition: 200ms;
     }
 }
 
 .hamburger {
     background-image: url('../images/hamburger.svg');
-    width: 52px;
-    height: 39px;
+    background-size: cover;
+    width: 40px;
+    height: 30px;
     text-indent: -9000px;
     display: block;
 }
-
-
-
-
 
 .slogan {
     font-family: 'CaeciliaLTStd-Italic';
     font-size: 20px;
     font-weight: 100;
     margin: 0;
-    padding: 0;
+    padding: 0 0 10px 0;
+    line-height: 130%;
+}
+
+.header {
+    padding-top: 20px;
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+    top: 0;
+
+    &.smaller {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
+
+        .header-image {
+
+            img {
+                width: 70px;
+            }
+        }
+    }
+}
+
+.header-text {
+
+    text-align: center;
+
+    h1 {
+        padding-bottom: 10px;
+    }
 }
 
 
-
-.page {
-    max-width: 1220px;
-    margin: 0 auto;
-    padding-top: 30px;
+.content {
+    margin-top: 210px;
+    padding-top: 20px;
+    height: 1200px;
     background: #ffffff;
 }
+
+.navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.contact-details {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    span {
+        display: block;
+        padding-bottom: 5px;
+    }
+}
+
+@media (min-width: $breakpoint2){
+
+    .header,
+    .header-image-text,
+    .header-contact-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 30px;
+    }
+}
+
+.tabs-section {
+}
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    //background: $brand-black;
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: inline-block;
+        padding: 0 5px;
+        color: $brand-green;
+    }
+
+    .active {
+        a {
+          font-weight: bold;
+        }
+    }
+}
+
 
 
 
