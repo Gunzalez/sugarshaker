@@ -116,9 +116,25 @@ a {
   position: absolute;
   top: 20px;
   left: 20px; }
-  .contact-details span {
-    display: block;
-    padding-bottom: 5px; }
+  .contact-details a {
+    display: inline-block; }
+  .contact-details .text {
+    line-height: 100%;
+    display: none; }
+  .contact-details > span {
+    padding-right: 5px;
+    display: inline-block; }
+  .contact-details .icon {
+    display: inline-block;
+    background-size: cover; }
+    .contact-details .icon.call {
+      background-image: url("../images/call.svg");
+      width: 40px;
+      height: 40px; }
+    .contact-details .icon.email {
+      background-image: url("../images/email.svg");
+      width: 44px;
+      height: 44px; }
 
 @media (min-width: 768px) {
   .header,
