@@ -44,9 +44,21 @@
     line-height: 130%;
 }
 
+.fixed {
+    .header {
+        position: fixed;
+    }
+
+    .content {
+        margin-top: 210px;
+        padding-top: 20px;
+
+    }
+}
+
+
 .header {
     padding-top: 20px;
-    position: fixed;
     background: #ffffff;
     width: 100%;
     top: 0;
@@ -73,8 +85,6 @@
 }
 
 .content {
-    margin-top: 210px;
-    padding-top: 20px;
     height: 1200px;
     background: #ffffff;
 }

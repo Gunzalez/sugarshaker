@@ -85,9 +85,15 @@ a {
   padding: 0 0 10px 0;
   line-height: 130%; }
 
+.fixed .header {
+  position: fixed; }
+
+.fixed .content {
+  margin-top: 210px;
+  padding-top: 20px; }
+
 .header {
   padding-top: 20px;
-  position: fixed;
   background: #ffffff;
   width: 100%;
   top: 0; }
@@ -102,8 +108,6 @@ a {
     padding-bottom: 10px; }
 
 .content {
-  margin-top: 210px;
-  padding-top: 20px;
   height: 1200px;
   background: #ffffff; }
 
