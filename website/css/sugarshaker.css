@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5 {
   font-family: 'CaeciliaLTStd-Roman';
   color: #27893e;
   margin: 0;
-  padding: 0; }
+  padding: 0 0 3% 0; }
 
 h1 {
   line-height: 100%;
@@ -49,6 +49,14 @@ h1 {
   @media (min-width: 768px) {
     h1 {
       font-size: 55px; } }
+
+h3 {
+  font-size: 22px;
+  font-weight: bold; }
+
+p {
+  line-height: 120%;
+  padding-bottom: 12px; }
 
 a {
   color: #006699; }
@@ -89,7 +97,7 @@ a {
   position: fixed; }
 
 .fixed .content {
-  padding-top: 227px; }
+  padding-top: 211px; }
 
 .header {
   padding-top: 20px;
@@ -153,26 +161,49 @@ a {
     justify-content: center;
     margin-left: 30px; } }
 
+.tabs-section {
+  background: #f5f5f5; }
+
 .tabs {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: center; }
+  text-align: center;
+  background: white; }
   .tabs li {
-    display: inline; }
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
   .tabs a {
     display: inline-block;
-    padding: 4px 6px;
-    border-radius: 4px;
-    color: #27893e;
-    background: #f5f5f5;
+    padding: 8px  0;
+    color: #444444;
     line-height: 100%;
-    font-size: 16px;
-    margin: 0 2px; }
-  .tabs .active a {
-    font-weight: bold;
-    background: white;
-    font-size: 18px; }
+    margin: 0 10px;
+    text-decoration: none; }
+  .tabs .active {
+    color: #27893e;
+    border-bottom: 3px solid #27893e; }
+
+.tabs-content {
+  padding: 20px; }
+  .tabs-content .imagery {
+    display: none; }
+  .tabs-content .tab-content {
+    display: none; }
+    .tabs-content .tab-content.active {
+      display: block; }
+
+.btn {
+  background-color: #27893e;
+  color: white;
+  font-weight: bold;
+  line-height: 100%;
+  padding: 10px 25px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px; }
 
 /* ------ utils -------------*/
 .visually-hidden {

@@ -5,15 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
     <title>Sugar Shaker</title>
     <meta name="Description" content="">
     <meta name="Keywords" content="">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link href="css/reset.css" rel="stylesheet">
     <link href="css/sugarshaker.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -64,12 +60,50 @@
 
         <div class="content">
 
-            <div class="tabs-section">
+            <div id="tabs" class="tabs-section">
                 <ul class="tabs">
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Engineering</a></li>
-                    <li class="active"><a href="#">Consultancy</a></li>
+                    <li><a href="#" class="tab">Design</a></li>
+                    <li><a href="#" class="tab">Engineering</a></li>
+                    <li><a href="#" class="tab active">Consultancy</a></li>
                 </ul>
+                <div id="tabs-content" class="tabs-content">
+                    <div class="tab-content" id="design">
+                        <div class="copy">
+                            <h3>Super amazing designs</h3>
+                            <p>It's always best when the light is off.
+                                It's always better on the outside.
+                                Fifteen blows to the back of your head.</p>
+                                <p>Fifteen blows to your mind.
+                                So lock the kids up safe tonight.
+                                Shut the eyes in the cupboard.
+                                I've got the smell of a local man.
+                                Who's got the loneliest feeling.</p>
+                        </div>
+                        <div class="cta">
+                            <a class="btn" href="#">Get in touch</a>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="engineering">
+                        <div class="copy">
+                            <h3>Engineering Success</h3>
+                            <p>Website design and digital projects from our seasoned web consultants based in the UK.</p>
+                            <p>Have our experienced web knowledge at your finger tips and work with us to find the solution your organisation needs.</p>
+                        </div>
+                        <div class="cta">
+                            <a class="btn" href="#">Get in touch</a>
+                        </div>
+                    </div>
+                    <div class="tab-content active" id="consultancy">
+                        <div class="copy">
+                            <h3>Specialist web consultancy</h3>
+                            <p>Website design and digital projects from our seasoned web consultants based in the UK.</p>
+                            <p>Have our experienced web knowledge at your finger tips and work with us to find the solution your organisation needs.</p>
+                        </div>
+                        <div class="cta">
+                            <a class="btn" href="#">Get in touch</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

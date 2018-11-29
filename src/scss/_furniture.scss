@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5 {
     font-family: 'CaeciliaLTStd-Roman';
     color: $brand-green;
     margin: 0;
-    padding: 0;
+    padding: 0 0 3% 0;
 }
 
 h1 {
@@ -32,15 +32,26 @@ h1 {
 
     @media (min-width: $breakpoint2) {
         font-size: 55px;
-
-
     }
 
 
 }
 
-p {}
+h2 {
+
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+p {
+    line-height: 120%;
+    padding-bottom: 12px;
+}
 
 a {
     color: $brand-blue;
 }
+
