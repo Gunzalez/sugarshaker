@@ -94,7 +94,8 @@ a {
   line-height: 130%; }
 
 .fixed .header {
-  position: fixed; }
+  position: fixed;
+  z-index: 10; }
 
 .fixed .content {
   padding-top: 211px; }
@@ -180,10 +181,24 @@ a {
     color: #444444;
     line-height: 100%;
     margin: 0 10px;
-    text-decoration: none; }
-  .tabs .active {
-    color: #27893e;
-    border-bottom: 3px solid #27893e; }
+    text-decoration: none;
+    position: relative; }
+    .tabs a:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 3px;
+      width: 0;
+      background: #27893e;
+      transition: width .250s ease, background-color .250s ease, left .250s ease; }
+    .tabs a.active {
+      color: #27893e; }
+      .tabs a.active:after {
+        width: 100%;
+        left: 0;
+        background: #27893e; }
 
 .tabs-content {
   padding: 20px; }
@@ -193,6 +208,9 @@ a {
     display: none; }
     .tabs-content .tab-content.active {
       display: block; }
+
+.bold {
+  font-weight: bold; }
 
 .btn {
   background-color: #27893e;

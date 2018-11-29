@@ -44,9 +44,6 @@ DomReady.ready(function() {
 
     sugarShaker.tabs.setUpEvents();
 
-
-
-
     window.onscroll = function() {
         sugarShaker.environment.scrollFunction();
     };
