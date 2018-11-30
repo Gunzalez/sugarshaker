@@ -46,7 +46,7 @@ h1 {
   color: #262825;
   font-size: 32px;
   padding-bottom: 5px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     h1 {
       font-size: 55px; } }
 
@@ -66,16 +66,6 @@ a {
   margin: 0 auto;
   background: #ffffff;
   position: relative; }
-
-.header-image {
-  padding-bottom: 5px;
-  text-align: center; }
-  .header-image a {
-    display: inline-block; }
-  .header-image img {
-    width: 100px;
-    display: block;
-    transition: 200ms; }
 
 .hamburger {
   background-image: url("../images/hamburger.svg");
@@ -109,6 +99,16 @@ a {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16); }
     .header.smaller .header-image img {
       width: 70px; }
+
+.header-image {
+  padding-bottom: 5px;
+  text-align: center; }
+  .header-image a {
+    display: inline-block; }
+  .header-image img {
+    width: 100px;
+    display: block;
+    transition: 200ms; }
 
 .header-text {
   text-align: center;
@@ -148,19 +148,6 @@ a {
       background-image: url("../images/email.svg");
       width: 44px;
       height: 44px; }
-
-@media (min-width: 768px) {
-  .header,
-  .header-image-text,
-  .header-contact-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-  .header-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 30px; } }
 
 .tabs-section {
   background: #f5f5f5; }
@@ -222,6 +209,42 @@ a {
   text-decoration: none;
   border-radius: 4px;
   font-size: 16px; }
+
+@media (min-width: 992px) {
+  .fixed .header {
+    max-width: 1220px; }
+  .header,
+  .header-image-text,
+  .header-contact-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .header {
+    padding: 25px 90px 20px 40px; }
+    .header.smaller {
+      box-shadow: none;
+      border-bottom: 1px solid #444444; }
+      .header.smaller .header-image img {
+        width: 100px; }
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px; }
+  .contact-details {
+    position: static; }
+    .contact-details a {
+      display: inline-block; }
+    .contact-details .text {
+      line-height: 100%;
+      display: none; }
+    .contact-details > span {
+      padding-right: 0;
+      padding-left: 5px;
+      display: inline; }
+  .navigation {
+    top: 30px;
+    right: 35px; } }
 
 /* ------ utils -------------*/
 .visually-hidden {

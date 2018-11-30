@@ -10,22 +10,6 @@
     position: relative;
 }
 
-.header-image {
-    padding-bottom: 5px;
-    text-align: center;
-
-
-    a {
-        display: inline-block;
-    }
-
-    img {
-        width: 100px;
-        display: block;
-        transition: 200ms;
-    }
-}
-
 .hamburger {
     background-image: url('../images/hamburger.svg');
     background-size: cover;
@@ -56,7 +40,6 @@
     }
 }
 
-
 .header {
     padding-top: 20px;
     background: #ffffff;
@@ -75,6 +58,21 @@
     }
 }
 
+.header-image {
+    padding-bottom: 5px;
+    text-align: center;
+
+    a {
+        display: inline-block;
+    }
+
+    img {
+        width: 100px;
+        display: block;
+        transition: 200ms;
+    }
+}
+
 .header-text {
 
     text-align: center;
@@ -84,6 +82,7 @@
         padding-bottom: 10px;
     }
 }
+
 
 .content {
     height: 1200px;
@@ -130,24 +129,6 @@
             width: 44px;
             height: 44px;
         }
-    }
-}
-
-@media (min-width: $breakpoint2){
-
-    .header,
-    .header-image-text,
-    .header-contact-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .header-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 30px;
     }
 }
 
@@ -238,6 +219,87 @@
 
 
 
+
+
+@media (min-width: $breakpoint3){
+
+    .fixed {
+        .header {
+            max-width: 1220px;
+        }
+
+        .content {
+            //padding-top: 211px;
+
+        }
+    }
+
+    .header,
+    .header-image-text,
+    .header-contact-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header {
+        padding: 25px 90px 20px 40px;
+
+
+        &.smaller {
+            box-shadow: none;
+            border-bottom: 1px solid $brand-grey;
+
+            .header-image {
+
+                img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .header-image {
+
+        //img {
+        //    width: 174px;
+        //}
+    }
+
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 30px;
+    }
+
+
+
+    .contact-details {
+        position: static;
+
+        a {
+            display: inline-block;
+        }
+
+        .text {
+            line-height: 100%;
+            display: none;
+        }
+
+        > span {
+            padding-right: 0;
+            padding-left: 5px;
+            display: inline;
+        }
+    }
+
+
+    .navigation {
+        top: 30px;
+        right: 35px;
+    }
+}
 
 
 
