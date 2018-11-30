@@ -323,7 +323,7 @@
         }
 
         a {
-            font-size: 40px;
+            font-size: 38px;
             font-weight: bold;
             color: $brand-green;
             padding-bottom: 15px;
@@ -360,27 +360,26 @@
 
         .tab-content {
             padding: 30px 40px;
+            min-height: 434px;
 
             &#design {
-                background: url("../images/bg-design.png") top left no-repeat;
-                min-height: 434px;
+                background: url("../images/bg-design.png") center left no-repeat;
             }
 
             &#consultancy {
-                background: url("../images/bg-consultancy.png") top left no-repeat;
-                min-height: 346px;
+                background: url("../images/bg-consultancy.png") center left no-repeat;
             }
 
             &#engineering {
-                background: url("../images/bg-engineering.png") top left no-repeat;
-                min-height: 419px;
+                background: url("../images/bg-engineering.png") center left no-repeat;
             }
         }
     }
 
     .tab-box {
         border-top: 3px solid #f5f5f5;
-        padding: 40px 30px;
+        border-bottom: 3px solid #f5f5f5;
+        padding: 60px 30px;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;

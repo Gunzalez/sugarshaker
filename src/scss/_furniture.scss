@@ -44,6 +44,11 @@ h2 {
 h3 {
     font-size: 22px;
     font-weight: bold;
+
+    @media (min-width: $breakpoint3) {
+        font-size: 40px;
+        font-weight: normal;
+    }
 }
 
 p {
