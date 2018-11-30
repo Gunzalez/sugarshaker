@@ -427,6 +427,43 @@
             padding-right: 70px;
         }
     }
+
+
+    .reasons-section {
+
+        .page-header {
+            padding-bottom: 20px;
+        }
+
+        .reason {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-bottom: 40px;
+
+            &:nth-last-child(1){
+                flex-direction: row-reverse;
+            }
+        }
+
+        .title {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .imagery {
+
+            img {
+                max-width: 284px;
+            }
+        }
+
+        .copy {
+            margin: 0;
+        }
+
+
+    }
 }
 
 

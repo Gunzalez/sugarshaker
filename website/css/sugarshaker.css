@@ -352,7 +352,23 @@ a {
     min-height: 350px; }
     .tab-box .copy {
       padding-left: 240px;
-      padding-right: 70px; } }
+      padding-right: 70px; }
+  .reasons-section .page-header {
+    padding-bottom: 20px; }
+  .reasons-section .reason {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 40px; }
+    .reasons-section .reason:nth-last-child(1) {
+      flex-direction: row-reverse; }
+  .reasons-section .title {
+    text-align: center;
+    padding-bottom: 20px; }
+  .reasons-section .imagery img {
+    max-width: 284px; }
+  .reasons-section .copy {
+    margin: 0; } }
 
 /* ------ utils -------------*/
 .visually-hidden {
