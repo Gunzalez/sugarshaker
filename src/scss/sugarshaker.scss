@@ -36,7 +36,6 @@
 
     .content {
         padding-top: 211px;
-
     }
 }
 
@@ -84,7 +83,6 @@
 }
 
 .content {
-    height: 1200px;
     background: #ffffff;
 }
 
@@ -180,8 +178,8 @@
 
 .tabs-section {
     background: #f5f5f5;
+    margin-bottom: 30px;
 }
-
 
 .tabs-content {
 
@@ -218,6 +216,44 @@
         width: auto;
     }
 }
+
+.page-header {
+    text-align: center;
+}
+
+.reasons-section {
+
+    .title {
+        text-align: center;
+    }
+
+    .imagery {
+        padding: 10px 30px;
+        text-align: center;
+
+        img {
+            max-width: 70%;
+            display: inline-block;
+        }
+    }
+
+    .copy {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 10px 30px 20px 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: $breakpoint3){
 
@@ -354,6 +390,7 @@
 
     .tabs-section {
         background: #ffffff;
+        margin-bottom: 0;
     }
 
     .tabs-content {
@@ -383,6 +420,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        min-height: 350px;
 
         .copy {
             padding-left: 240px;
