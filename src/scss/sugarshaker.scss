@@ -95,6 +95,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 20;
 }
 
 .contact-details {
@@ -256,7 +257,7 @@
 .page-navigation {
     position: fixed;
     background: rgba(255, 255, 255, 0.9);
-    z-index: 20;
+    z-index: 15;
     overflow-y: scroll;
     bottom: 0;
     left: 0;
@@ -294,23 +295,17 @@
     .page-navigation {
         position: absolute;
         background: rgba(255, 255, 255, 0.7);
-        bottom: 0;
+        right: -35px;
+        top: -30px;
         left: auto;
         width: 300px;
-        top: 0;
-        right: -300px;
-        transition: right 250ms;
-        display: block;
-        //border-left: 1px solid #f5f5f5;
-
-        &.show {
-            right: 0;
-        }
+        bottom: 0;
+        height: 100vh;
     }
 
-    .navigation-box {
-        padding: 80px 40px;
-    }
+    //.navigation-box {
+    //    padding: 80px 40px;
+    //}
 
     .mobile-only {
         display: none;

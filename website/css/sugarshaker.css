@@ -146,7 +146,8 @@ a {
 .navigation-trigger {
   position: absolute;
   top: 20px;
-  right: 20px; }
+  right: 20px;
+  z-index: 20; }
 
 .contact-details {
   position: absolute;
@@ -261,7 +262,7 @@ a {
 .page-navigation {
   position: fixed;
   background: rgba(255, 255, 255, 0.9);
-  z-index: 20;
+  z-index: 15;
   overflow-y: scroll;
   bottom: 0;
   left: 0;
@@ -282,17 +283,12 @@ a {
   .page-navigation {
     position: absolute;
     background: rgba(255, 255, 255, 0.7);
-    bottom: 0;
+    right: -35px;
+    top: -30px;
     left: auto;
     width: 300px;
-    top: 0;
-    right: -300px;
-    transition: right 250ms;
-    display: block; }
-    .page-navigation.show {
-      right: 0; }
-  .navigation-box {
-    padding: 80px 40px; }
+    bottom: 0;
+    height: 100vh; }
   .mobile-only {
     display: none; }
   .fixed .header {

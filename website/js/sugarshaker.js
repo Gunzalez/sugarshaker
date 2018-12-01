@@ -49,6 +49,8 @@ DomReady.ready(function() {
 
     sugarShaker.navigation = {
 
+        el:  document.querySelector('#page-navigation'),
+
         init: function () {
             var trigger = document.querySelector('#trigger'),
                 closeBtn = document.querySelector('#close');
@@ -69,21 +71,15 @@ DomReady.ready(function() {
         },
 
         show: function () {
-
-            var navigation = document.querySelector('#page-navigation');
-
-            if(navigation){
-                navigation.classList.add('show');
+            if(sugarShaker.navigation.el){
+                sugarShaker.navigation.el.classList.add('show');
                 document.body.classList.add('no-scroll');
             }
         },
 
         hide: function () {
-
-            var navigation = document.querySelector('#page-navigation');
-
-            if(navigation){
-                navigation.classList.remove('show');
+            if(sugarShaker.navigation.el){
+                sugarShaker.navigation.el.classList.remove('show');
                 document.body.classList.remove('no-scroll');
             }
         }
