@@ -47,10 +47,17 @@ DomReady.ready(function() {
 
         init: function () {
             var trigger = document.querySelector('#trigger');
+            var closeBtn = document.querySelector('#close');
             if(trigger){
                 trigger.addEventListener('click', function (e) {
                     e.preventDefault();
                     sugarShaker.navigation.show();
+                });
+            }
+            if(closeBtn){
+                closeBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    sugarShaker.navigation.hide();
                 });
             }
         },
@@ -63,7 +70,16 @@ DomReady.ready(function() {
             }
         },
 
+        hide: function () {
+            var navigation = document.querySelector('#page-navigation');
+            if(navigation){
+                navigation.classList.remove('show');
+                document.body.classList.remove('no-scroll');
+            }
+        },
+
         scroll: function () {
+
 
         }
     };
