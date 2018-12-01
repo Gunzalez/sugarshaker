@@ -85,13 +85,20 @@ a {
   position: relative;
   overflow: hidden; }
 
-.hamburger {
+.hamburger,
+.close {
   background-image: url("../images/hamburger.svg");
   background-size: cover;
   width: 40px;
   height: 30px;
   text-indent: -9000px;
-  display: block; }
+  display: inline-block; }
+
+.close {
+  background-image: url("../images/hamburger-close.svg");
+  width: 42px;
+  height: 42px;
+  text-align: left; }
 
 .slogan {
   font-family: 'CaeciliaLTStd-Italic';
@@ -155,19 +162,20 @@ a {
     line-height: 100%;
     display: none; }
   .contact-details > span {
-    padding-right: 5px;
+    padding-right: 10px;
     display: inline-block; }
   .contact-details .icon {
     display: inline-block;
     background-size: cover; }
     .contact-details .icon.call {
       background-image: url("../images/call.svg");
-      width: 40px;
-      height: 40px; }
+      width: 36px;
+      height: 36px;
+      transform: translateY(-2px); }
     .contact-details .icon.email {
       background-image: url("../images/email.svg");
-      width: 44px;
-      height: 44px; }
+      width: 40px;
+      height: 40px; }
 
 .tabs {
   margin: 0;
@@ -187,7 +195,8 @@ a {
     margin: 0 10px;
     text-decoration: none;
     position: relative;
-    font-family: 'CaeciliaLTStd-Light'; }
+    font-family: 'CaeciliaLTStd-Light';
+    font-size: 18px; }
     .tabs a:after {
       content: '';
       display: block;
@@ -269,23 +278,30 @@ a {
     display: block; }
 
 .navigation-box {
-  padding: 0; }
+  padding: 0;
+  text-align: right; }
+  .navigation-box #close {
+    margin: 30px 35px; }
   .navigation-box > ul {
     background: white;
     text-align: right;
-    padding: 30px; }
+    padding: 0 35px;
+    display: inline-block; }
   .navigation-box li {
-    border-top: 3px solid #f5f5f5; }
+    border-top: 3px solid #f5f5f5;
+    padding: 5px 0; }
     .navigation-box li a {
       text-transform: uppercase;
       text-decoration: none;
       color: #262825;
       font-size: 18px;
       font-weight: bold;
-      padding: 10px 0;
+      padding: 7px 0;
       display: block; }
     .navigation-box li:nth-child(1) {
       border-top: none; }
+    .navigation-box li ul {
+      padding-bottom: 10px; }
     .navigation-box li li {
       border-top: none; }
       .navigation-box li li a {
@@ -299,13 +315,15 @@ a {
     overflow: scroll; }
   .page-navigation {
     position: absolute;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.9);
     right: -35px;
     top: -30px;
     left: auto;
     width: 300px;
     bottom: 0;
     height: 100vh; }
+  .navigation-box > ul {
+    width: 250px; }
   .mobile-only {
     display: none; }
   .fixed .header {
@@ -337,9 +355,7 @@ a {
       line-height: 100%;
       display: none; }
     .contact-details > span {
-      padding-right: 0;
-      padding-left: 5px;
-      display: inline; }
+      padding-left: 8px; }
   .navigation-trigger {
     top: 30px;
     right: 35px; }
