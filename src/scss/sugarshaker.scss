@@ -32,7 +32,7 @@
 }
 
 .slogan {
-    font-family: 'CaeciliaLTStd-Italic';
+    font-family: $brandFontItalic;
     font-size: 20px;
     font-weight: 100;
     margin: 0;
@@ -172,7 +172,7 @@
         margin: 0 10px;
         text-decoration: none;
         position: relative;
-        font-family: 'CaeciliaLTStd-Light';
+        font-family: $brandFontLight;
         font-size: 18px;
 
         &:after {
@@ -217,7 +217,7 @@
     .tab-box {
 
         .copy {
-            font-family: 'CaeciliaLTStd-Light';
+            font-family: $brandFontLight;
             font-size: 18px;
             padding-bottom: 10px;
         }

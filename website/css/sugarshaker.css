@@ -38,7 +38,7 @@ body {
   font-weight: 100; }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'CaeciliaLTStd-Bold';
+  font-family: CaeciliaLTStd-Bold;
   color: #27893e;
   margin: 0;
   padding: 0 0 12px 0; }
@@ -105,7 +105,7 @@ a {
   text-align: left; }
 
 .slogan {
-  font-family: 'CaeciliaLTStd-Italic';
+  font-family: CaeciliaLTStd-Italic;
   font-size: 20px;
   font-weight: 100;
   margin: 0;
@@ -200,7 +200,7 @@ a {
     margin: 0 10px;
     text-decoration: none;
     position: relative;
-    font-family: 'CaeciliaLTStd-Light';
+    font-family: CaeciliaLTStd-Light;
     font-size: 18px; }
     .tabs a:after {
       content: '';
@@ -229,7 +229,7 @@ a {
     display: block; }
 
 .tabs-content .tab-box .copy {
-  font-family: 'CaeciliaLTStd-Light';
+  font-family: CaeciliaLTStd-Light;
   font-size: 18px;
   padding-bottom: 10px; }
 
