@@ -4,7 +4,7 @@ DomReady.ready(function() {
 
     sugarShaker.header = {
 
-        scrollFunction: function () {
+        scroll: function () {
             if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
                 document.getElementsByTagName("body")[0].classList.add('fixed');
             } else {
@@ -21,20 +21,24 @@ DomReady.ready(function() {
 
     sugarShaker.tabs = {
 
-        setUpEvents: function () {
+        init: function () {
+
             var links = document.querySelectorAll('#tabs .tab');
+
             if(links){
+
                 for(var l=0; l < links.length; l++){
+
                     links[l].onclick = function (e) {
+
                         e.preventDefault();
+
                         if(!e.target.classList.contains('active')){
 
                             document.querySelectorAll('#tabs .active')[0].classList.remove('active');
                             e.target.classList.add('active');
-
                             document.querySelectorAll('#tabs-content .active')[0].classList.remove('active');
                             var index = [].slice.call(document.querySelectorAll('#tabs .tab')).indexOf(e.target);
-
                             document.querySelectorAll('#tabs-content .tab-content')[index].classList.add('active');
                         }
                     };
@@ -46,14 +50,16 @@ DomReady.ready(function() {
     sugarShaker.navigation = {
 
         init: function () {
-            var trigger = document.querySelector('#trigger');
-            var closeBtn = document.querySelector('#close');
+            var trigger = document.querySelector('#trigger'),
+                closeBtn = document.querySelector('#close');
+
             if(trigger){
                 trigger.addEventListener('click', function (e) {
                     e.preventDefault();
                     sugarShaker.navigation.show();
                 });
             }
+
             if(closeBtn){
                 closeBtn.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -63,7 +69,9 @@ DomReady.ready(function() {
         },
 
         show: function () {
+
             var navigation = document.querySelector('#page-navigation');
+
             if(navigation){
                 navigation.classList.add('show');
                 document.body.classList.add('no-scroll');
@@ -71,7 +79,9 @@ DomReady.ready(function() {
         },
 
         hide: function () {
+
             var navigation = document.querySelector('#page-navigation');
+
             if(navigation){
                 navigation.classList.remove('show');
                 document.body.classList.remove('no-scroll');
@@ -81,10 +91,10 @@ DomReady.ready(function() {
 
     sugarShaker.navigation.init();
 
-    sugarShaker.tabs.setUpEvents();
+    sugarShaker.tabs.init();
 
     window.onscroll = function() {
-        sugarShaker.header.scrollFunction();
+        sugarShaker.header.scroll();
     };
 
 });
