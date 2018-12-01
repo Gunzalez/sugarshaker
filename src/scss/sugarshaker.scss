@@ -274,9 +274,15 @@
     top: 0;
     right: 0;
     display: none;
+    opacity: 0;
+    transition: opacity 250ms;
 
     &.show {
         display: block;
+    }
+
+    &.on {
+        opacity: 1;
     }
 }
 
@@ -334,7 +340,7 @@
 
         a {
             text-transform: none;
-            color: $brand-blue;
+            color: $brand-black;
             font-size: 15px;
         }
     }
@@ -344,15 +350,15 @@
     border-top: 3px solid #f5f5f5;
     border-bottom: 3px solid #f5f5f5;
     min-height: 150px;
-    margin: 0 30px 30px;
+    margin: 0 30px 10px;
 }
 
 .footer {
-    padding: 0 30px 30px;
+    padding: 60px 30px 30px;
     text-align: center;
 
     ul {
-        padding: 20px 0;
+        padding: 10px 0;
 
     }
 
@@ -361,9 +367,10 @@
 
         a {
             text-decoration: none;
-            padding: 5px;
+            padding: 10px 5px;
             font-weight: bold;
             color: $brand-black;
+            display: inline-block;
 
         }
     }
@@ -392,10 +399,8 @@
     .footer {
 
         li {
+            padding: 0 10px;
 
-            a {
-                padding: 5px 15px;
-            }
         }
     }
 

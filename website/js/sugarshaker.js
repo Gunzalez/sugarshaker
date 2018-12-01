@@ -73,13 +73,19 @@ DomReady.ready(function() {
         show: function () {
             if(sugarShaker.navigation.el){
                 sugarShaker.navigation.el.classList.add('show');
+                setTimeout(function () {
+                    sugarShaker.navigation.el.classList.add('on');
+                }, 0);
                 document.body.classList.add('no-scroll');
             }
         },
 
         hide: function () {
             if(sugarShaker.navigation.el){
-                sugarShaker.navigation.el.classList.remove('show');
+                sugarShaker.navigation.el.classList.remove('on');
+                setTimeout(function () {
+                    sugarShaker.navigation.el.classList.remove('show');
+                }, 250);
                 document.body.classList.remove('no-scroll');
             }
         }
