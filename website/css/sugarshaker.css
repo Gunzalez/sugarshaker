@@ -325,13 +325,17 @@ a {
   border-top: 3px solid #f5f5f5;
   border-bottom: 3px solid #f5f5f5;
   min-height: 150px;
-  margin: 0 30px 10px; }
+  margin: 0 0 10px; }
 
 .footer {
-  padding: 60px 30px 30px;
-  text-align: center; }
+  padding: 0 30px 30px;
+  text-align: center;
+  background-image: url("../images/bg-footer.png");
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat; }
   .footer ul {
-    padding: 10px 0; }
+    padding: 20px 0; }
   .footer li {
     display: inline; }
     .footer li a {
@@ -349,8 +353,10 @@ a {
     padding-bottom: 5px; }
 
 @media (min-width: 992px) {
-  .footer li {
-    padding: 0 10px; }
+  .footer {
+    background: url("../images/bg-footer.png") bottom right no-repeat; }
+    .footer li {
+      padding: 0 10px; }
   .no-scroll {
     overflow: scroll; }
   .page-navigation {

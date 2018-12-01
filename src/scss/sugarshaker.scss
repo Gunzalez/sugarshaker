@@ -350,16 +350,20 @@
     border-top: 3px solid #f5f5f5;
     border-bottom: 3px solid #f5f5f5;
     min-height: 150px;
-    margin: 0 30px 10px;
+    margin: 0 0 10px;
 }
 
 .footer {
-    padding: 60px 30px 30px;
+    padding: 0 30px 30px;
     text-align: center;
+    background-image: url("../images/bg-footer.png");
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
 
     ul {
-        padding: 10px 0;
-
+        padding: 20px 0;
     }
 
     li {
@@ -397,6 +401,7 @@
 @media (min-width: $breakpoint3){
 
     .footer {
+        background: url("../images/bg-footer.png") bottom right no-repeat;
 
         li {
             padding: 0 10px;
