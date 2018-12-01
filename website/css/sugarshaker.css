@@ -317,7 +317,35 @@ a {
       color: #006699;
       font-size: 15px; }
 
+.client-logos {
+  border-top: 3px solid #f5f5f5;
+  border-bottom: 3px solid #f5f5f5;
+  min-height: 150px;
+  margin: 0 30px 30px; }
+
+.footer {
+  padding: 0 30px 30px;
+  text-align: center; }
+  .footer ul {
+    padding: 20px 0; }
+  .footer li {
+    display: inline; }
+    .footer li a {
+      text-decoration: none;
+      padding: 5px;
+      font-weight: bold;
+      color: #262825; }
+
+.disclaimer {
+  padding: 10px 0; }
+  .disclaimer p {
+    font-size: 12px;
+    line-height: 140%;
+    padding-bottom: 5px; }
+
 @media (min-width: 992px) {
+  .footer li a {
+    padding: 5px 15px; }
   .no-scroll {
     overflow: scroll; }
   .page-navigation {
