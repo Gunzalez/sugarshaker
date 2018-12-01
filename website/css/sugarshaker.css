@@ -72,7 +72,7 @@ h4 {
       font-size: 32px; } }
 
 p {
-  line-height: 120%;
+  line-height: 130%;
   padding-bottom: 12px; }
 
 a {
@@ -159,11 +159,15 @@ a {
   left: 20px; }
   .contact-details a {
     display: inline-block; }
+    .contact-details a:hover {
+      color: #262825; }
+      .contact-details a:hover span {
+        text-decoration: underline !important; }
   .contact-details .text {
     line-height: 100%;
     display: none; }
   .contact-details > span {
-    padding-right: 10px;
+    padding: 0 10px 0 0;
     display: inline-block; }
   .contact-details .icon {
     display: inline-block;
@@ -172,11 +176,12 @@ a {
       background-image: url("../images/call.svg");
       width: 36px;
       height: 36px;
-      transform: translateY(-2px); }
+      transform: translateY(-3px); }
     .contact-details .icon.email {
       background-image: url("../images/email.svg");
       width: 40px;
-      height: 40px; }
+      height: 40px;
+      transform: translateY(-2px); }
 
 .tabs {
   margin: 0;
@@ -218,10 +223,15 @@ a {
   margin-bottom: 30px; }
 
 .tabs-content .tab-content {
-  padding: 30px;
+  padding: 20px 30px 30px;
   display: none; }
   .tabs-content .tab-content.active {
     display: block; }
+
+.tabs-content .tab-box .copy {
+  font-family: 'CaeciliaLTStd-Light';
+  font-size: 18px;
+  padding-bottom: 10px; }
 
 .bold {
   font-weight: bold; }
@@ -340,9 +350,12 @@ a {
     .footer li a {
       text-decoration: none;
       padding: 10px 5px;
-      font-weight: bold;
-      color: #262825;
+      font-weight: 400;
+      color: #006699;
       display: inline-block; }
+      .footer li a:hover {
+        color: #262825;
+        text-decoration: underline; }
 
 .disclaimer {
   padding: 10px 0; }
@@ -382,7 +395,7 @@ a {
     flex-direction: row;
     justify-content: space-between; }
   .header {
-    padding: 25px 90px 10px 40px; }
+    padding: 25px 85px 10px 40px; }
     .header .header-image img {
       width: 174px; }
     .header.smaller {
@@ -397,12 +410,17 @@ a {
   .contact-details {
     position: static; }
     .contact-details a {
-      display: inline-block; }
+      display: inline-block;
+      line-height: 38px;
+      font-weight: 400;
+      text-decoration: none; }
     .contact-details .text {
       line-height: 100%;
+      display: inline-block; }
+    .contact-details .icon {
       display: none; }
     .contact-details > span {
-      padding-left: 8px; }
+      padding: 0 10px; }
   .navigation-trigger {
     top: 30px;
     right: 35px; }
@@ -469,9 +487,7 @@ a {
       padding-bottom: 20px; }
     .tab-box .copy {
       padding-left: 240px;
-      padding-right: 70px;
-      font-family: 'CaeciliaLTStd-Light';
-      font-size: 18px; }
+      padding-right: 70px; }
   .reasons-section .page-header {
     padding-bottom: 20px; }
   .reasons-section .reason {

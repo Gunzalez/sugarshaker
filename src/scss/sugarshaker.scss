@@ -98,10 +98,6 @@
     }
 }
 
-.content {
-    //background: #ffffff;
-}
-
 .navigation-trigger {
     position: absolute;
     top: 20px;
@@ -116,6 +112,14 @@
 
     a {
         display: inline-block;
+
+        &:hover {
+            color: $brand-black;
+
+            span {
+                text-decoration: underline !important;
+            }
+        }
     }
 
     .text {
@@ -124,7 +128,7 @@
     }
 
     > span {
-        padding-right: 10px;
+        padding: 0 10px 0 0;
         display: inline-block;
     }
 
@@ -136,13 +140,14 @@
             background-image: url('../images/call.svg');
             width: 36px;
             height: 36px;
-            transform: translateY(-2px)
+            transform: translateY(-3px)
         }
 
         &.email {
             background-image: url('../images/email.svg');
             width: 40px;
             height: 40px;
+            transform: translateY(-2px)
         }
     }
 }
@@ -152,7 +157,6 @@
     padding: 0;
     list-style: none;
     text-align: center;
-    //background: white;
 
     li {
         display: inline-block;
@@ -195,7 +199,6 @@
     }
 }
 
-
 .tabs-section {
     margin-bottom: 30px;
 }
@@ -203,11 +206,20 @@
 .tabs-content {
 
     .tab-content {
-        padding: 30px;
+        padding: 20px 30px 30px;
         display: none;
 
         &.active {
             display: block;
+        }
+    }
+
+    .tab-box {
+
+        .copy {
+            font-family: 'CaeciliaLTStd-Light';
+            font-size: 18px;
+            padding-bottom: 10px;
         }
     }
 }
@@ -228,7 +240,6 @@
     font-size: 18px;
     white-space: nowrap;
     text-transform: capitalize;
-
     width: 100%;
     text-align: center;
 
@@ -374,10 +385,14 @@
         a {
             text-decoration: none;
             padding: 10px 5px;
-            font-weight: bold;
-            color: $brand-black;
+            font-weight: 400;
+            color: $brand-blue;
             display: inline-block;
 
+            &:hover {
+                color: $brand-black;
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -457,7 +472,7 @@
     }
 
     .header {
-        padding: 25px 90px 10px 40px;
+        padding: 25px 85px 10px 40px;
 
         .header-image {
 
@@ -490,15 +505,22 @@
 
         a {
             display: inline-block;
+            line-height: 38px;
+            font-weight: 400;
+            text-decoration: none;
         }
 
         .text {
             line-height: 100%;
+            display: inline-block;
+        }
+
+        .icon {
             display: none;
         }
 
         > span {
-            padding-left: 8px;
+            padding: 0 10px;
         }
     }
 
@@ -606,11 +628,8 @@
         .copy {
             padding-left: 240px;
             padding-right: 70px;
-            font-family: 'CaeciliaLTStd-Light';
-            font-size: 18px;
         }
     }
-
 
     .reasons-section {
 
