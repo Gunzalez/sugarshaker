@@ -86,7 +86,8 @@ a {
   max-width: 1220px;
   margin: 0 auto;
   background: #ffffff;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .hamburger {
   background-image: url("../images/hamburger.svg");
@@ -117,7 +118,9 @@ a {
   width: 100%;
   top: 0; }
   .header.smaller {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16); }
+    -webkit-box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.16); }
     .header.smaller .header-image img {
       width: 70px; }
 
@@ -140,7 +143,7 @@ a {
 .content {
   background: #ffffff; }
 
-.navigation {
+.navigation-trigger {
   position: absolute;
   top: 20px;
   right: 20px; }
@@ -252,7 +255,46 @@ a {
   margin: 0 auto;
   padding: 10px 30px 20px 30px; }
 
+.no-scroll {
+  overflow: hidden; }
+
+.page-navigation {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 20;
+  overflow-y: scroll;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: none; }
+  .page-navigation.show {
+    display: block; }
+
+.navigation-box {
+  padding: 80px 40px; }
+  .navigation-box ul {
+    background: white; }
+
 @media (min-width: 992px) {
+  .no-scroll {
+    overflow: scroll; }
+  .page-navigation {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    left: auto;
+    width: 300px;
+    top: 0;
+    right: -300px;
+    transition: right 250ms;
+    display: block; }
+    .page-navigation.show {
+      right: 0; }
+  .navigation-box {
+    padding: 80px 40px; }
+  .mobile-only {
+    display: none; }
   .fixed .header {
     max-width: 1220px; }
   .fixed .content {
@@ -267,11 +309,8 @@ a {
     padding: 25px 90px 20px 40px; }
     .header .header-image img {
       width: 174px; }
-    .header.smaller {
-      box-shadow: none;
-      border-bottom: 1px solid #444444; }
-      .header.smaller .header-image img {
-        width: 120px; }
+    .header.smaller .header-image img {
+      width: 120px; }
   .header-text {
     display: flex;
     flex-direction: column;
@@ -288,7 +327,7 @@ a {
       padding-right: 0;
       padding-left: 5px;
       display: inline; }
-  .navigation {
+  .navigation-trigger {
     top: 30px;
     right: 35px; }
   .tabs li {
