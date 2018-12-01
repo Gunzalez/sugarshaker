@@ -266,7 +266,7 @@
 
 .page-navigation {
     position: fixed;
-    background: rgba(255, 255, 255, 0.9);
+    background: white;
     z-index: 15;
     bottom: 0;
     left: 0;
@@ -288,10 +288,10 @@
     }
 
     > ul {
-        background: white;
         text-align: right;
         padding: 0 35px;
         display: inline-block;
+        width: 100%;
     }
 
     li {
@@ -325,6 +325,16 @@
                 font-size: 16px;
                 padding: 6px 0;
             }
+        }
+    }
+
+    .mobile-only {
+        text-align: left;
+
+        a {
+            text-transform: none;
+            color: $brand-blue;
+            font-size: 15px;
         }
     }
 }
