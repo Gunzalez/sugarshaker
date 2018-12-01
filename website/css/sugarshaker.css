@@ -272,7 +272,7 @@ a {
     display: block; }
 
 .navigation-box {
-  padding: 80px 40px; }
+  padding: 0; }
   .navigation-box ul {
     background: white; }
 

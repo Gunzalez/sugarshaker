@@ -76,11 +76,6 @@ DomReady.ready(function() {
                 navigation.classList.remove('show');
                 document.body.classList.remove('no-scroll');
             }
-        },
-
-        scroll: function () {
-
-
         }
     };
 
