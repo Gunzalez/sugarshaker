@@ -238,6 +238,7 @@ a {
   border-radius: 2px;
   font-size: 18px;
   white-space: nowrap;
+  text-transform: capitalize;
   width: 100%;
   text-align: center; }
   @media (min-width: 992px) {
@@ -267,7 +268,7 @@ a {
 
 .page-navigation {
   position: fixed;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   z-index: 15;
   bottom: 0;
   left: 0;
@@ -281,12 +282,12 @@ a {
   padding: 0;
   text-align: right; }
   .navigation-box #close {
-    margin: 30px 35px; }
+    margin: 23px 33px; }
   .navigation-box > ul {
-    background: white;
     text-align: right;
     padding: 0 35px;
-    display: inline-block; }
+    display: inline-block;
+    width: 100%; }
   .navigation-box li {
     border-top: 3px solid #f5f5f5;
     padding: 5px 0; }
@@ -309,6 +310,12 @@ a {
         color: #006699;
         font-size: 16px;
         padding: 6px 0; }
+  .navigation-box .mobile-only {
+    text-align: left; }
+    .navigation-box .mobile-only a {
+      text-transform: none;
+      color: #006699;
+      font-size: 15px; }
 
 @media (min-width: 992px) {
   .no-scroll {
