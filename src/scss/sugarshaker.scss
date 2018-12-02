@@ -250,6 +250,18 @@
 
 .page-header {
     text-align: center;
+    text-transform: capitalize;
+}
+
+.page-introduction {
+    padding-bottom: 30px;
+    border-bottom: 3px solid $brand-lGrey;
+    margin: 0 30px;
+
+    .copy {
+        max-width: 480px;
+        margin: 0 auto;
+    }
 }
 
 .reasons-section {
@@ -631,12 +643,11 @@
         }
     }
 
+    .page-header {
+        padding-bottom: 20px;
+    }
+
     .reasons-section {
-
-        .page-header {
-            padding-bottom: 20px;
-        }
-
         .reason {
             display: flex;
             flex-direction: row;

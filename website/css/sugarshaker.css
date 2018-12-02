@@ -255,7 +255,16 @@ a {
       width: auto; } }
 
 .page-header {
-  text-align: center; }
+  text-align: center;
+  text-transform: capitalize; }
+
+.page-introduction {
+  padding-bottom: 30px;
+  border-bottom: 3px solid #f5f5f5;
+  margin: 0 30px; }
+  .page-introduction .copy {
+    max-width: 480px;
+    margin: 0 auto; }
 
 .reasons-section .title {
   text-align: center; }
@@ -488,7 +497,7 @@ a {
     .tab-box .copy {
       padding-left: 240px;
       padding-right: 70px; }
-  .reasons-section .page-header {
+  .page-header {
     padding-bottom: 20px; }
   .reasons-section .reason {
     display: flex;
