@@ -41,6 +41,10 @@ DomReady.ready(function() {
                             var index = [].slice.call(document.querySelectorAll('#tabs .tab')).indexOf(e.target);
                             document.querySelectorAll('#tabs-content .tab-content')[index].classList.add('active');
                         }
+
+                        if(sugarShaker.navigation.el.classList.contains('show')){
+                            sugarShaker.navigation.hide();
+                        }
                     };
                 }
             }

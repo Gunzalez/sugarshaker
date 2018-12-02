@@ -1,6 +1,7 @@
 @import "colours";
 @import "furniture";
 @import "mixins";
+@import "form";
 
 .page {
     max-width: 1220px;
@@ -256,7 +257,7 @@
 .page-introduction {
     padding-bottom: 30px;
     border-bottom: 3px solid $brand-lGrey;
-    margin: 0 30px;
+    margin: 0 40px 30px;
 
     .copy {
         max-width: 480px;
@@ -264,7 +265,7 @@
     }
 }
 
-.reasons-section {
+.page-detail {
 
     .title {
         text-align: center;
@@ -280,10 +281,13 @@
         }
     }
 
-    .copy {
-        max-width: 520px;
-        margin: 0 auto;
-        padding: 10px 30px 20px 30px;
+    .detail-row {
+
+        .copy {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 10px 30px 20px 30px;
+        }
     }
 }
 
@@ -380,7 +384,7 @@
 }
 
 .footer {
-    padding: 0 30px 30px;
+    padding: 0 30px 20px;
     text-align: center;
     background-image: url("../images/bg-footer.png");
     background-size: contain;
@@ -419,6 +423,16 @@
     }
 }
 
+.address {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+    }
+}
+
 
 
 
@@ -429,7 +443,15 @@
 
 @media (min-width: $breakpoint3){
 
+
+
+    .address {
+        text-align: left;
+    }
+
+
     .footer {
+        padding: 0 30px 40px;
         background: url("../images/bg-footer.png") bottom right no-repeat;
 
         li {
@@ -647,15 +669,20 @@
         padding-bottom: 20px;
     }
 
-    .reasons-section {
-        .reason {
+    .page-detail {
+
+        .detail-row {
             display: flex;
             flex-direction: row;
             justify-content: center;
             padding-bottom: 40px;
 
-            &:nth-last-child(1){
+            &.reversed {
                 flex-direction: row-reverse;
+            }
+
+            .copy {
+                margin: 0;
             }
         }
 
@@ -670,16 +697,8 @@
                 max-width: 284px;
             }
         }
-
-        .copy {
-            margin: 0;
-        }
     }
 }
-
-
-
-
 
 
 

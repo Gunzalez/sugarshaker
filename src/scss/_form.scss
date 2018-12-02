@@ -1,89 +1,111 @@
+@import "colours";
+@import "fonts";
+
 form {
-  margin: 30px 0;
-
-  .has-placeholder {
-    display: none;
-  }
-
-  @media (min-width: $breakpoint3){
-
-    .has-placeholder {
-      display: block;
-    }
-
-    .form-group {
-      textarea::placeholder,
-      input::placeholder {
-        color: #ffffff;
-      }
-    }
-  }
-
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  textarea {
+    margin: 10px 0;
     width: 100%;
-    height: 200px !important;
-  }
 
-  select,
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea {
-
-    &.form-control {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      height: inherit;
-      outline: none;
-      border-radius: 0;
-      background: #ffffff;
-      resize: none;
-      padding: 8px 10px 8px 12px;
+    .form-row {
+        margin-bottom: 10px;
     }
-  }
 
-  select {
-    &.form-control {
-      background: url("../images/bg-select.png") right center no-repeat;
-      padding-right: 30px;
+    textarea {
+        width: 100%;
+        height: 200px;
     }
-  }
+
+    .placeholder {
+
+        display: none;
+    }
+
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+
+        &.form-control {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            height: inherit;
+            outline: none;
+            background: $brand-lGrey;
+            border: 1px solid $brand-lGrey;
+            resize: none;
+            padding: 8px 10px;
+            border-radius: 3px;
+            display: block;
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+
+    select {
+
+        &.form-control {
+            background: url("../images/bg-select.png") right center no-repeat;
+            padding-right: 30px;
+        }
+      }
+
+    @media (min-width: $breakpoint3){
+
+
+
+        .placeholder {
+
+            display: block;
+        }
+
+        .form-row {
+
+            textarea::placeholder,
+            input::placeholder {
+                color: #ffffff;
+            }
+        }
+    }
 }
 
 
 .form-check {
 
-  @media (min-width: $breakpoint3){
+    @media (min-width: $breakpoint3){
 
-    input + label {
-      padding-right: 80px;
+        input + label {
+            padding-right: 80px;
+        }
     }
-  }
-  margin-bottom: 1.5rem;
+
+    margin-bottom: 1.5rem;
 }
 
 .error-span {
-  display: none;
+    display: none;
 }
 
 .error {
 
-  select,
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea {
-    border-color: #ff0000;
-    outline: 1px solid #ff0000 !important;
-  }
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        border-color: #ff0000;
+        outline: 1px solid #ff0000 !important;
+    }
 
-  .error-span {
-    display: block;
-    color: #ff0000;
-  }
+    .error-span {
+        display: block;
+        color: #ff0000;
+    }
+}
+
+
+
+@media (min-width: $breakpoint3){
+
+
 }

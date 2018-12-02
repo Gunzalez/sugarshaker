@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 @font-face {
   font-family: 'CaeciliaLTStd-Bold';
   src: url("fonts/CaeciliaLTStd-Bold.eot") format("embedded-opentype"), url("fonts/CaeciliaLTStd-Bold.oft") format("opentype"), url("fonts/CaeciliaLTStd-Bold.woff") format("woff"), url("fonts/CaeciliaLTStd-Bold.ttf") format("truetype"), url("fonts/CaeciliaLTStd-Bold.svg") format("svg");
@@ -77,6 +78,89 @@ p {
 
 a {
   color: #006699; }
+
+@font-face {
+  font-family: 'CaeciliaLTStd-Bold';
+  src: url("fonts/CaeciliaLTStd-Bold.eot") format("embedded-opentype"), url("fonts/CaeciliaLTStd-Bold.oft") format("opentype"), url("fonts/CaeciliaLTStd-Bold.woff") format("woff"), url("fonts/CaeciliaLTStd-Bold.ttf") format("truetype"), url("fonts/CaeciliaLTStd-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CaeciliaLTStd-Roman';
+  src: url("fonts/CaeciliaLTStd-Roman.eot") format("embedded-opentype"), url("fonts/CaeciliaLTStd-Roman.oft") format("opentype"), url("fonts/CaeciliaLTStd-Roman.woff") format("woff"), url("fonts/CaeciliaLTStd-Roman.ttf") format("truetype"), url("fonts/CaeciliaLTStd-Roman.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CaeciliaLTStd-Italic';
+  src: url("fonts/CaeciliaLTStd-Italic.eot") format("embedded-opentype"), url("fonts/CaeciliaLTStd-Italic.oft") format("opentype"), url("fonts/CaeciliaLTStd-Italic.woff") format("woff"), url("fonts/CaeciliaLTStd-Italic.ttf") format("truetype"), url("fonts/CaeciliaLTStd-Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CaeciliaLTStd-Light';
+  src: url("fonts/CaeciliaLTStd-Light.eot") format("embedded-opentype"), url("fonts/CaeciliaLTStd-Light.oft") format("opentype"), url("fonts/CaeciliaLTStd-Light.woff") format("woff"), url("fonts/CaeciliaLTStd-Light.ttf") format("truetype"), url("fonts/CaeciliaLTStd-Light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+form {
+  margin: 10px 0;
+  width: 100%; }
+  form .form-row {
+    margin-bottom: 10px; }
+  form textarea {
+    width: 100%;
+    height: 200px; }
+  form .placeholder {
+    display: none; }
+  form select.form-control,
+  form input[type="text"].form-control,
+  form input[type="email"].form-control,
+  form input[type="password"].form-control,
+  form textarea.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: inherit;
+    outline: none;
+    background: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    resize: none;
+    padding: 8px 10px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    font-size: 18px; }
+  form select.form-control {
+    background: url("../images/bg-select.png") right center no-repeat;
+    padding-right: 30px; }
+  @media (min-width: 992px) {
+    form .placeholder {
+      display: block; }
+    form .form-row textarea::placeholder,
+    form .form-row input::placeholder {
+      color: #ffffff; } }
+
+.form-check {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 992px) {
+    .form-check input + label {
+      padding-right: 80px; } }
+
+.error-span {
+  display: none; }
+
+.error select,
+.error input[type="text"],
+.error input[type="email"],
+.error input[type="password"],
+.error textarea {
+  border-color: #ff0000;
+  outline: 1px solid #ff0000 !important; }
+
+.error .error-span {
+  display: block;
+  color: #ff0000; }
 
 .page {
   max-width: 1220px;
@@ -261,22 +345,22 @@ a {
 .page-introduction {
   padding-bottom: 30px;
   border-bottom: 3px solid #f5f5f5;
-  margin: 0 30px; }
+  margin: 0 40px 30px; }
   .page-introduction .copy {
     max-width: 480px;
     margin: 0 auto; }
 
-.reasons-section .title {
+.page-detail .title {
   text-align: center; }
 
-.reasons-section .imagery {
+.page-detail .imagery {
   padding: 10px 30px;
   text-align: center; }
-  .reasons-section .imagery img {
+  .page-detail .imagery img {
     max-width: 70%;
     display: inline-block; }
 
-.reasons-section .copy {
+.page-detail .detail-row .copy {
   max-width: 520px;
   margin: 0 auto;
   padding: 10px 30px 20px 30px; }
@@ -346,7 +430,7 @@ a {
   margin: 0 0 10px; }
 
 .footer {
-  padding: 0 30px 30px;
+  padding: 0 30px 20px;
   text-align: center;
   background-image: url("../images/bg-footer.png");
   background-size: contain;
@@ -373,8 +457,18 @@ a {
     line-height: 140%;
     padding-bottom: 5px; }
 
+.address {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center; }
+  .address a {
+    text-decoration: none; }
+
 @media (min-width: 992px) {
+  .address {
+    text-align: left; }
   .footer {
+    padding: 0 30px 40px;
     background: url("../images/bg-footer.png") bottom right no-repeat; }
     .footer li {
       padding: 0 10px; }
@@ -499,20 +593,20 @@ a {
       padding-right: 70px; }
   .page-header {
     padding-bottom: 20px; }
-  .reasons-section .reason {
+  .page-detail .detail-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 40px; }
-    .reasons-section .reason:nth-last-child(1) {
+    .page-detail .detail-row.reversed {
       flex-direction: row-reverse; }
-  .reasons-section .title {
+    .page-detail .detail-row .copy {
+      margin: 0; }
+  .page-detail .title {
     text-align: center;
     padding-bottom: 20px; }
-  .reasons-section .imagery img {
-    max-width: 284px; }
-  .reasons-section .copy {
-    margin: 0; } }
+  .page-detail .imagery img {
+    max-width: 284px; } }
 
 /* ------ utils -------------*/
 .visually-hidden {
