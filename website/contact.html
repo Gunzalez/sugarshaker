@@ -117,11 +117,42 @@
                     <div class="copy">
 
                         <h4 class="title">Contact form</h4>
-                        <form id="contact-form" action="" class="page-form">
-                            <div class="form-row">
-                                <label for="name" class="placeholder">Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="Name" />
+                        <form id="contact-form" action="" class="page-form" novalidate>
+
+                            <div class="form-row error">
+                                <label for="name" class="placeholder">Name <span>(mandatory)</span></label>
+                                <input type="text" id="name" class="form-control" placeholder="Name (mandatory)" />
+                                <span class="error-span">Please type a name</span>
                             </div>
+
+                            <div class="form-row error">
+                                <label for="email" class="placeholder">Email <span>(mandatory)</span></label>
+                                <input type="email" id="email" class="form-control" placeholder="Email address (mandatory)" />
+                                <span class="error-span">Please type a valid email address</span>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="phone" class="placeholder">Name</label>
+                                <input type="number" id="phone" class="form-control" placeholder="Phone number" />
+                            </div>
+
+                            <div class="form-row">
+                                <label for="company" class="placeholder">Company</label>
+                                <input type="text" id="company" class="form-control" placeholder="Company" />
+                            </div>
+
+                            <div class="form-row">
+                                <label for="message" class="placeholder">Message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="Message" required=""></textarea>
+                            </div>
+
+                            <div class="form-row check-box">
+
+
+                            </div>
+
+
+
                         </form>
 
 
