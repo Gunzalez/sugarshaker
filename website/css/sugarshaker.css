@@ -142,39 +142,44 @@ form {
   form select.form-control {
     background: url("../images/bg-select.png") right center no-repeat;
     padding-right: 30px; }
+  form .form-check {
+    position: relative;
+    padding-left: 32px; }
+    form .form-check input[type="checkbox"] {
+      display: inline;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -10px;
+      cursor: pointer; }
+      form .form-check input[type="checkbox"] + label {
+        display: inline;
+        line-height: 20px;
+        cursor: pointer; }
+  form .error-span {
+    display: none; }
+  form .error select.form-control,
+  form .error input[type="text"].form-control,
+  form .error input[type="email"].form-control,
+  form .error input[type="number"].form-control,
+  form .error input[type="password"].form-control,
+  form .error textarea.form-control {
+    border: 1px solid #e50000; }
+  form .error .error-span {
+    display: block;
+    color: #b70000;
+    font-size: 14px; }
   @media (min-width: 992px) {
     form {
       width: 440px;
       margin: 0 auto; }
       form .placeholder {
         display: block; }
-      form .form-row {
-        margin-bottom: 15px; }
-        form .form-row textarea::placeholder,
-        form .form-row input::placeholder {
-          color: #f5f5f5; } }
-
-.form-check {
-  margin-bottom: 1.5rem; }
-  @media (min-width: 992px) {
-    .form-check input + label {
-      padding-right: 80px; } }
-
-.error-span {
-  display: none; }
-
-.error select.form-control,
-.error input[type="text"].form-control,
-.error input[type="email"].form-control,
-.error input[type="number"].form-control,
-.error input[type="password"].form-control,
-.error textarea.form-control {
-  border: 1px solid #e50000; }
-
-.error .error-span {
-  display: block;
-  color: #b70000;
-  font-size: 14px; }
+      form .form-row textarea::placeholder,
+      form .form-row input::placeholder {
+        color: #f5f5f5; } }
 
 .page {
   max-width: 1220px;
@@ -349,7 +354,8 @@ form {
   white-space: nowrap;
   text-transform: capitalize;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  border: none; }
   @media (min-width: 992px) {
     .btn {
       width: auto; } }

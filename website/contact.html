@@ -126,7 +126,7 @@
                             </div>
 
                             <div class="form-row error">
-                                <label for="email" class="placeholder">Email address<span>(mandatory)</span></label>
+                                <label for="email" class="placeholder">Email address <span>(mandatory)</span></label>
                                 <input type="email" id="email" class="form-control" placeholder="Email address (mandatory)" required />
                                 <span class="error-span">Please type a valid email address</span>
                             </div>
@@ -143,15 +143,19 @@
 
                             <div class="form-row">
                                 <label for="message" class="placeholder">Message</label>
-                                <textarea class="form-control" id="message" name="message" placeholder="Message" required=""></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Message"></textarea>
                             </div>
 
-                            <div class="form-row check-box">
-
-
+                            <div class="form-row">
+                                <div class="form-check">
+                                    <input id="tandcs" type="checkbox" name="shipping" value="I have read the GDPR and T&C’s">
+                                    <label for="tandcs">I have read the <a href="terms-conditions.html" title="General Data Protection Regulation">GDPR</a> and <a href="terms-conditions.html" title="Terms & Conditions">T&C’s</a></label>
+                                </div>
                             </div>
 
-
+                            <div class="form-row">
+                                <button type="submit" class="btn">Contact us</button>
+                            </div>
 
                         </form>
 
@@ -166,7 +170,7 @@
         <div class="footer">
 
             <ul>
-                <li><a href="terms-conditions.html">Ts&nbsp;&&nbsp;Cs</a></li>
+                <li><a href="terms-conditions.html">T&C's</a></li>
                 <li><a href="privacy-policy.html">Privacy</a></li>
                 <li><a href="cookie.html">Cookies</a></li>
                 <!--<li><a href="sitemap.html">Sitemap</a></li>-->

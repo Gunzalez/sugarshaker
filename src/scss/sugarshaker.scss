@@ -247,6 +247,7 @@ $borerLine:     2px solid $brand-lGrey;
     text-transform: capitalize;
     width: 100%;
     text-align: center;
+    border: none;
 
     @media (min-width: $breakpoint3){
         width: auto;

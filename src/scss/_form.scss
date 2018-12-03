@@ -63,10 +63,56 @@ form {
             background: url("../images/bg-select.png") right center no-repeat;
             padding-right: 30px;
         }
-      }
+    }
+
+    .form-check {
+        position: relative;
+        padding-left: 32px;
+
+        input[type="checkbox"] {
+            display: inline;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -10px;
+            cursor: pointer;
+
+            & + label {
+                display: inline;
+                line-height: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .error-span {
+        display: none;
+    }
+
+    .error {
+
+        select,
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        textarea {
+
+            &.form-control {
+                border: 1px solid #e50000;
+            }
+        }
+
+        .error-span {
+            display: block;
+            color: #b70000;
+            font-size: 14px;
+        }
+    }
 
     @media (min-width: $breakpoint3){
-
         width: 440px;
         margin: 0 auto;
 
@@ -75,51 +121,10 @@ form {
         }
 
         .form-row {
-            margin-bottom: 15px;
-
             textarea::placeholder,
             input::placeholder {
                 color: $brand-lGrey;
             }
         }
-    }
-}
-
-
-.form-check {
-
-    @media (min-width: $breakpoint3){
-
-        input + label {
-            padding-right: 80px;
-        }
-    }
-
-    margin-bottom: 1.5rem;
-}
-
-.error-span {
-    display: none;
-}
-
-
-.error {
-
-    select,
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
-    textarea {
-
-        &.form-control {
-            border: 1px solid #e50000;
-        }
-    }
-
-    .error-span {
-        display: block;
-        color: #b70000;
-        font-size: 14px;
     }
 }
