@@ -248,6 +248,7 @@ $borerLine:     2px solid $brand-lGrey;
     width: 100%;
     text-align: center;
     border: none;
+    cursor: pointer;
 
     @media (min-width: $breakpoint3){
         width: auto;

@@ -360,7 +360,8 @@ form {
   text-transform: capitalize;
   width: 100%;
   text-align: center;
-  border: none; }
+  border: none;
+  cursor: pointer; }
   @media (min-width: 992px) {
     .btn {
       width: auto; } }
