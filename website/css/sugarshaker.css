@@ -509,7 +509,8 @@ form {
     left: auto;
     width: 300px;
     bottom: 0;
-    height: 100vh; }
+    height: 100vh;
+    border-left: 1px solid #f5f5f5; }
   .navigation-box > ul {
     width: 250px; }
   .mobile-only {
