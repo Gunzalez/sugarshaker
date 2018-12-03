@@ -3,6 +3,8 @@
 @import "mixins";
 @import "form";
 
+$borerLine:     2px solid $brand-lGrey;
+
 .page {
     max-width: 1220px;
     margin: 0 auto;
@@ -13,6 +15,8 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-color: white;
+    border-left: 1px solid $brand-lGrey;
+    border-right: 1px solid $brand-lGrey;
 }
 
 .hamburger,
@@ -256,7 +260,7 @@
 
 .page-introduction {
     padding-bottom: 30px;
-    border-bottom: 3px solid $brand-lGrey;
+    border-bottom: $borerLine;
     margin: 0 40px 30px;
 
     .copy {
@@ -332,7 +336,7 @@
     }
 
     li {
-        border-top: 3px solid $brand-lGrey;
+        border-top: $borerLine;
         padding: 5px 0;
 
         a {
@@ -377,8 +381,8 @@
 }
 
 .client-logos {
-    border-top: 3px solid $brand-lGrey;
-    border-bottom: 3px solid $brand-lGrey;
+    border-top: $borerLine;
+    border-bottom: $borerLine;
     min-height: 150px;
     margin: 0 0 10px;
 }
@@ -489,7 +493,7 @@
     .fixed {
 
         .header {
-            max-width: 1220px;
+            max-width: 1218px;
         }
 
         .content {
@@ -647,8 +651,8 @@
     }
 
     .tab-box {
-        border-top: 3px solid $brand-lGrey;
-        border-bottom: 3px solid $brand-lGrey;
+        border-top: $borerLine;
+        border-bottom: $borerLine;
         padding: 60px 30px;
         display: flex;
         flex-direction: row;
