@@ -95,6 +95,32 @@ DomReady.ready(function() {
         }
     };
 
+    sugarShaker.gallery = {
+
+        el: document.querySelector('.gallery-images'),
+
+        init: function () {
+            if(sugarShaker.gallery.el){
+
+                var thumbs = document.querySelectorAll('.gallery-images a'),
+                    imagesArr = [];
+
+                for(var t=0; t<thumbs.length; t++){
+                    thumbs[t].addEventListener('click', function (e) {
+                        e.preventDefault();
+                        document.querySelector('#main-image').src = e.target.parentNode.href;
+                        document.querySelector('#main-image').alt = e.target.alt;
+                    });
+                    // for pre-loading images
+                    imagesArr[t] = new Image();
+                    imagesArr[t].src = thumbs[t].href;
+                }
+            }
+        }
+    };
+
+    sugarShaker.gallery.init();
+
     sugarShaker.navigation.init();
 
     sugarShaker.tabs.init();
