@@ -500,11 +500,17 @@ form {
 
 .work-example {
   margin: 0 30px 30px;
-  text-align: center; }
+  text-align: center;
+  display: block;
+  text-decoration: none; }
   .work-example img {
-    display: block; }
+    display: inline-block;
+    transition: transform 250ms; }
   .work-example .img-box {
-    margin-bottom: 10px; }
+    margin: 10px 20px 20px;
+    text-align: center; }
+  .work-example * {
+    color: #262825; }
 
 @media (min-width: 992px) {
   .work-example {
@@ -512,10 +518,14 @@ form {
     margin: 10px 20px 30px; }
     .work-example .img-box {
       height: 148px;
-      width: 216px;
+      width: 100%;
+      margin: 0 0 20px 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center; }
+    .work-example:hover img {
+      transform: scale(1.05, 1.05); }
   .address {
     text-align: left; }
   .footer {

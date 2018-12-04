@@ -442,13 +442,21 @@ $borerLine:     2px solid $brand-lGrey;
 .work-example {
     margin: 0 30px 30px;
     text-align: center;
+    display: block;
+    text-decoration: none;
 
     img {
-        display: block;
+        display: inline-block;
+        transition: transform 250ms;
     }
 
     .img-box {
-        margin-bottom: 10px;
+        margin: 10px 20px 20px;
+        text-align: center;
+    }
+
+    * {
+        color: $brand-black;
     }
 }
 
@@ -459,18 +467,26 @@ $borerLine:     2px solid $brand-lGrey;
 
 @media (min-width: $breakpoint3){
 
-
-
     .work-example {
         max-width: 320px;
         margin: 10px 20px 30px;
 
         .img-box {
             height: 148px;
-            width: 216px;
+            width: 100%;
+            margin: 0 0 20px 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        &:hover {
+            img {
+                //-ms-transform: scale(1.5, 1.5); /* IE 9 */
+                //-webkit-transform: scale(1.5, 1.5); /* Safari */
+                transform: scale(1.05, 1.05);
+            }
         }
     }
 
