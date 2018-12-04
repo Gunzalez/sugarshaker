@@ -532,8 +532,22 @@ form {
   .work-example * {
     color: #262825; }
 
+.gallery-images {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
+  .gallery-images a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 15px;
+    flex: 0 0 auto; }
+    .gallery-images a:nth-last-child(1) {
+      margin-right: 0; }
+
 .image-gallery {
-  padding: 0 30px 20px; }
+  padding-bottom: 20px; }
 
 .image-stage {
   margin-bottom: 15px;
@@ -689,22 +703,24 @@ form {
       padding-right: 70px; }
   .page-header {
     padding-bottom: 20px; }
-  .page-detail .detail-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 40px;
-    flex-wrap: wrap; }
-    .page-detail .detail-row.reversed {
-      flex-direction: row-reverse; }
-    .page-detail .detail-row .copy {
-      margin: 0; }
-  .page-detail .title {
-    padding-bottom: 20px; }
-  .page-detail .imagery {
-    padding: 0 40px; }
-    .page-detail .imagery img {
-      max-width: 284px; } }
+  .page-detail {
+    padding-top: 15px; }
+    .page-detail .detail-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-bottom: 40px;
+      flex-wrap: wrap; }
+      .page-detail .detail-row.reversed {
+        flex-direction: row-reverse; }
+      .page-detail .detail-row .copy {
+        margin: 0; }
+    .page-detail .title {
+      padding-bottom: 20px; }
+    .page-detail .imagery {
+      padding: 0 40px; }
+      .page-detail .imagery img {
+        max-width: 284px; } }
 
 /* ------ utils -------------*/
 .visually-hidden {

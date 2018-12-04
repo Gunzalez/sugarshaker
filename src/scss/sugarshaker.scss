@@ -469,9 +469,28 @@ $borerLine:     2px solid $brand-lGrey;
     }
 }
 
+.gallery-images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        margin-right: 15px;
+        flex: 0 0 auto;
+
+        &:nth-last-child(1){
+            margin-right: 0;
+        }
+    }
+}
+
 .image-gallery {
 
-    padding: 0 30px 20px;
+    padding-bottom: 20px;
 
 }
 
@@ -743,6 +762,7 @@ $borerLine:     2px solid $brand-lGrey;
     }
 
     .page-detail {
+        padding-top: 15px;
 
         .detail-row {
             display: flex;
