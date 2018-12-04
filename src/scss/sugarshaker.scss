@@ -271,11 +271,11 @@ $borerLine:     2px solid $brand-lGrey;
     }
 }
 
-.page-detail {
+.title {
+  text-align: center;
+}
 
-    .title {
-        text-align: center;
-    }
+.page-detail {
 
     .imagery {
         padding: 10px 30px;
@@ -737,7 +737,6 @@ $borerLine:     2px solid $brand-lGrey;
         }
 
         .title {
-            text-align: center;
             padding-bottom: 20px;
         }
 

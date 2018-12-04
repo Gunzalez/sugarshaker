@@ -384,7 +384,7 @@ form {
     max-width: 480px;
     margin: 0 auto; }
 
-.page-detail .title {
+.title {
   text-align: center; }
 
 .page-detail .imagery {
@@ -667,7 +667,6 @@ form {
     .page-detail .detail-row .copy {
       margin: 0; }
   .page-detail .title {
-    text-align: center;
     padding-bottom: 20px; }
   .page-detail .imagery img {
     max-width: 284px; } }
