@@ -38,7 +38,7 @@ $borerLine:     2px solid $brand-lGrey;
 
 .slogan {
     font-family: $brandFontItalic;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 100;
     margin: 0;
     padding: 0 0 10px 0;
@@ -96,7 +96,7 @@ $borerLine:     2px solid $brand-lGrey;
 .header-text {
 
     text-align: center;
-    padding-bottom: 5px;
+    padding: 0 15px 15px;
 
     h1 {
         padding-bottom: 10px;
@@ -108,6 +108,11 @@ $borerLine:     2px solid $brand-lGrey;
     top: 20px;
     right: 20px;
     z-index: 20;
+}
+
+
+.content {
+    padding: 0 20px;
 }
 
 .contact-details {
@@ -174,7 +179,7 @@ $borerLine:     2px solid $brand-lGrey;
         padding: 8px  0;
         color: $brand-grey;
         line-height: 100%;
-        margin: 0 10px;
+        margin: 0 8px;
         text-decoration: none;
         position: relative;
         font-family: $brandFontLight;
@@ -211,7 +216,7 @@ $borerLine:     2px solid $brand-lGrey;
 .tabs-content {
 
     .tab-content {
-        padding: 20px 30px 30px;
+        padding: 20px 0;
         display: none;
 
         &.active {
@@ -261,9 +266,9 @@ $borerLine:     2px solid $brand-lGrey;
 }
 
 .page-introduction {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     border-bottom: $borerLine;
-    margin: 0 40px 30px;
+    margin-bottom: 20px;
 
     .copy {
         max-width: 480px;
@@ -275,10 +280,14 @@ $borerLine:     2px solid $brand-lGrey;
   text-align: center;
 }
 
+.content {
+    padding: 0 20px;
+}
+
 .page-detail {
 
     .imagery {
-        padding: 10px 30px;
+        padding: 10px 0;
         text-align: center;
 
         img {
@@ -290,9 +299,9 @@ $borerLine:     2px solid $brand-lGrey;
     .detail-row {
 
         .copy {
-            max-width: 520px;
+            max-width: 480px;
             margin: 0 auto;
-            padding: 10px 30px 20px 30px;
+            padding: 10px 0 20px 0;
         }
     }
 }
@@ -390,7 +399,7 @@ $borerLine:     2px solid $brand-lGrey;
 }
 
 .footer {
-    padding: 0 30px 20px;
+    padding: 0 20px 20px;
     text-align: center;
     background-image: url("../images/bg-footer.png");
     background-size: contain;
@@ -447,7 +456,7 @@ $borerLine:     2px solid $brand-lGrey;
 
     img {
         display: inline-block;
-        transition: transform 250ms;
+        transition: transform 500ms;
     }
 
     .img-box {
@@ -457,6 +466,21 @@ $borerLine:     2px solid $brand-lGrey;
 
     * {
         color: $brand-black;
+    }
+}
+
+.image-gallery {
+
+    padding: 0 30px 20px;
+
+}
+
+.image-stage {
+    margin-bottom: 15px;
+    border: 1px solid $brand-lGrey;
+
+    img {
+        width: 100%;
     }
 }
 
@@ -483,8 +507,8 @@ $borerLine:     2px solid $brand-lGrey;
 
         &:hover {
             img {
-                //-ms-transform: scale(1.5, 1.5); /* IE 9 */
-                //-webkit-transform: scale(1.5, 1.5); /* Safari */
+                -ms-transform: scale(1.05, 1.05); /* IE 9 */
+                -webkit-transform: scale(1.05, 1.05); /* Safari */
                 transform: scale(1.05, 1.05);
             }
         }
@@ -741,6 +765,7 @@ $borerLine:     2px solid $brand-lGrey;
         }
 
         .imagery {
+            padding: 0 40px;
 
             img {
                 max-width: 284px;
