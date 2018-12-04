@@ -37,7 +37,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 100; }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
   font-family: CaeciliaLTStd-Bold;
   color: #27893e;
   margin: 0;
@@ -70,6 +70,12 @@ h4 {
   @media (min-width: 992px) {
     h4 {
       font-size: 32px; } }
+
+h5 {
+  color: #262825;
+  font-weight: bold;
+  padding-bottom: 12px;
+  font-size: 18px; }
 
 p {
   line-height: 130%;
@@ -492,7 +498,24 @@ form {
   .address a {
     text-decoration: none; }
 
+.work-example {
+  margin: 0 30px 30px;
+  text-align: center; }
+  .work-example img {
+    display: block; }
+  .work-example .img-box {
+    margin-bottom: 10px; }
+
 @media (min-width: 992px) {
+  .work-example {
+    max-width: 320px;
+    margin: 10px 20px 30px; }
+    .work-example .img-box {
+      height: 148px;
+      width: 216px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
   .address {
     text-align: left; }
   .footer {
@@ -540,7 +563,8 @@ form {
     justify-content: center;
     margin-left: 30px; }
   .contact-details {
-    position: static; }
+    position: static;
+    text-align: right; }
     .contact-details a {
       display: inline-block;
       line-height: 38px;
@@ -626,7 +650,8 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 40px; }
+    padding-bottom: 40px;
+    flex-wrap: wrap; }
     .page-detail .detail-row.reversed {
       flex-direction: row-reverse; }
     .page-detail .detail-row .copy {

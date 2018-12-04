@@ -439,8 +439,18 @@ $borerLine:     2px solid $brand-lGrey;
     }
 }
 
+.work-example {
+    margin: 0 30px 30px;
+    text-align: center;
 
+    img {
+        display: block;
+    }
 
+    .img-box {
+        margin-bottom: 10px;
+    }
+}
 
 
 
@@ -448,6 +458,21 @@ $borerLine:     2px solid $brand-lGrey;
 
 
 @media (min-width: $breakpoint3){
+
+
+
+    .work-example {
+        max-width: 320px;
+        margin: 10px 20px 30px;
+
+        .img-box {
+            height: 148px;
+            width: 216px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
 
 
@@ -543,6 +568,7 @@ $borerLine:     2px solid $brand-lGrey;
 
     .contact-details {
         position: static;
+        text-align: right;
 
         a {
             display: inline-block;
@@ -683,6 +709,7 @@ $borerLine:     2px solid $brand-lGrey;
             flex-direction: row;
             justify-content: center;
             padding-bottom: 40px;
+            flex-wrap: wrap;
 
             &.reversed {
                 flex-direction: row-reverse;

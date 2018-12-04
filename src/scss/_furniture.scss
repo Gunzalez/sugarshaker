@@ -16,7 +16,7 @@ body {
     font-weight: 100;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
     font-family: $brandFontBold;
     color: $brand-green;
     margin: 0;
@@ -57,6 +57,13 @@ h4 {
     @media (min-width: $breakpoint3) {
         font-size: 32px;
     }
+}
+
+h5 {
+    color: $brand-black;
+    font-weight: bold;
+    padding-bottom: 12px;
+    font-size: 18px;
 }
 
 p {
