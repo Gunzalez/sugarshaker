@@ -41,7 +41,7 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
     font-size: 18px;
     font-weight: 100;
     margin: 0;
-    padding: 0 0 10px 0;
+    padding: 0;
     line-height: 130%;
 }
 
@@ -221,6 +221,10 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
 
     .tab-box {
 
+        .title {
+            text-align: left;
+        }
+
         .copy {
             font-family: $brandFontLight;
             font-size: 18px;
@@ -229,9 +233,12 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
     }
 }
 
-.bold,
-strong {
+.bold {
     font-weight: bold;
+}
+
+strong {
+    font-weight: 400;
 }
 
 .btn {
@@ -269,6 +276,8 @@ strong {
     .copy {
         max-width: 480px;
         margin: 0 auto;
+        font-weight: 400;
+        padding-bottom: 10px;
     }
 }
 
@@ -333,6 +342,12 @@ strong {
 
     #close {
         margin: 23px 33px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
     > ul {
@@ -544,7 +559,49 @@ figcaption {
 
 .member {
 
-    h5 {
+    .imagery {
+        max-width: 480px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+
+
+        .heading {
+            text-align: left;
+            padding-left: 15px;
+
+            span {
+                display: block;
+            }
+        }
+
+    }
+
+    .copy {
+
+        .heading {
+            display: none;
+
+            span {
+                position: relative;
+                padding-left: 24px;
+
+                &:before {
+                    content: '';
+                    width: 12px;
+                    height: 2px;
+                    background: $brand-green;
+                    position: absolute;
+                    left: 5px;
+                    top: 50%;
+                    margin-top: -1px;
+                }
+            }
+        }
+    }
+
+    .heading {
+        line-height: 140%;
 
         span {
             color: $brand-green;
@@ -552,6 +609,22 @@ figcaption {
     }
 }
 
+.copy {
+
+    ul, ol {
+        padding-left: 15px;
+
+        li {
+            padding-bottom: 10px;
+            line-height: 130%;
+            padding-left: 10px;
+        }
+
+        li:nth-child(even) {
+            font-weight: 400;
+        }
+    }
+}
 
 
 
@@ -566,11 +639,20 @@ figcaption {
         justify-content: center;
 
         .imagery {
+            display: block;
             padding: 10px 0 20px 0;
+
+            .heading {
+                display: none;
+            }
         }
 
         .copy {
             padding-top: 0;
+
+            .heading {
+                display: block;
+            }
         }
     }
 
@@ -750,6 +832,11 @@ figcaption {
         flex-direction: column;
         justify-content: center;
         margin-left: 30px;
+        padding: 0;
+
+        .slogan {
+            text-align: left;
+        }
     }
 
     .contact-details {
@@ -906,6 +993,10 @@ figcaption {
             .copy {
                 margin: 0;
                 padding-top: 0;
+
+                & ~ .copy {
+                    margin-left: 30px;
+                }
             }
         }
 
