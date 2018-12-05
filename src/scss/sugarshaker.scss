@@ -615,14 +615,19 @@ figcaption {
         padding-left: 15px;
 
         li {
-            padding-bottom: 10px;
+            padding-bottom: 5px;
             line-height: 130%;
-            padding-left: 10px;
+            padding-left: 5px;
         }
 
         li:nth-child(even) {
             font-weight: 400;
         }
+    }
+
+    ul {
+
+        padding-left: 22px;
     }
 }
 
@@ -1001,6 +1006,10 @@ figcaption {
                 & ~ .copy {
                     margin-left: 30px;
                 }
+            }
+
+            .service {
+                width: 300px;
             }
         }
 

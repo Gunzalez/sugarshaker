@@ -630,11 +630,14 @@ figcaption {
 .copy ul, .copy ol {
   padding-left: 15px; }
   .copy ul li, .copy ol li {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     line-height: 130%;
-    padding-left: 10px; }
+    padding-left: 5px; }
   .copy ul li:nth-child(even), .copy ol li:nth-child(even) {
     font-weight: 400; }
+
+.copy ul {
+  padding-left: 22px; }
 
 @media (min-width: 992px) {
   .member {
@@ -851,6 +854,8 @@ figcaption {
         padding-top: 0; }
         .page-detail .detail-row .copy ~ .copy {
           margin-left: 30px; }
+      .page-detail .detail-row .service {
+        width: 300px; }
     .page-detail .title {
       padding-bottom: 20px; }
     .page-detail .imagery {
