@@ -988,6 +988,10 @@ figcaption {
 
             &.reversed {
                 flex-direction: row-reverse;
+
+                .imagery {
+                    padding: 0 0 0 40px;
+                }
             }
 
             .copy {
@@ -1005,7 +1009,7 @@ figcaption {
         }
 
         .imagery {
-            padding: 0 40px;
+            padding: 0 40px 0 0;
 
             img {
                 max-width: 284px;
