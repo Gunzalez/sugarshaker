@@ -3,7 +3,7 @@
 @import "mixins";
 @import "form";
 
-$borerLine:     2px solid $brand-lGrey;
+$borerLine:     2px solid lighten($brand-grey, 65%);
 
 .page {
     max-width: 1220px;
@@ -109,7 +109,6 @@ $borerLine:     2px solid $brand-lGrey;
     right: 20px;
     z-index: 20;
 }
-
 
 .content {
     padding: 0 20px;
@@ -456,7 +455,7 @@ $borerLine:     2px solid $brand-lGrey;
 
     img {
         display: inline-block;
-        transition: transform 500ms;
+        transition: transform 250ms;
     }
 
     .img-box {
@@ -470,15 +469,16 @@ $borerLine:     2px solid $brand-lGrey;
 }
 
 .image-gallery {
-    padding-bottom: 20px;
+    padding: 10px 0 20px 0;
 
     .gallery-stage {
         margin-bottom: 15px;
-        border: 1px solid $brand-lGrey;
+        outline: 1px solid lighten($brand-grey, 60%);
 
         img {
             width: 100%;
             display: block;
+            transition: background 250ms;
         }
     }
 
@@ -497,12 +497,23 @@ $borerLine:     2px solid $brand-lGrey;
             &:nth-last-child(1){
                 margin-right: 0;
             }
+
+            &.active {
+
+                img {
+                    outline: 1px solid lighten($brand-grey, 60%);
+                }
+            }
         }
     }
 }
 
 @media (min-width: $breakpoint3){
 
+
+    .content {
+        padding: 0 40px;
+    }
 
     .image-gallery {
         max-width: 480px;
@@ -511,23 +522,48 @@ $borerLine:     2px solid $brand-lGrey;
         .gallery-stage {
 
             img {
+                display: block;
             }
         }
 
         .gallery-images {
-            display: flex;
-            overflow-y: hidden;
-            overflow-x: scroll;
-            -webkit-overflow-scrolling: touch;
+            display: initial;
+            overflow: visible;
+            width: 480px;
+            float: left;
 
             a {
-                display: inline-block;
+                display: inline;
                 text-decoration: none;
-                margin-right: 15px;
-                flex: 0 0 auto;
+                margin: 0 15px 15px 0;
+                float: left;
+                width: 150px;
 
-                &:nth-last-child(1){
+                img {
+                    width: 100%;
+                    opacity: 0.5;
+                    transition: all 250ms;
+                }
+
+                &:nth-child(3),
+                &:nth-child(6),
+                &:nth-child(9){
                     margin-right: 0;
+                }
+
+                &:hover {
+
+                    img {
+                        transform: scale(1.1);
+                        opacity: 1;
+                    }
+                }
+
+                &.active {
+
+                    img {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -564,7 +600,7 @@ $borerLine:     2px solid $brand-lGrey;
 
 
     .footer {
-        padding: 0 30px 40px;
+        padding: 0 40px 40px;
         background: url("../images/bg-footer.png") bottom right no-repeat;
 
         li {
@@ -745,6 +781,7 @@ $borerLine:     2px solid $brand-lGrey;
 
         .tab-content {
             padding: 30px 40px;
+            margin: 0 -40px;
             min-height: 434px;
 
             &#design {
