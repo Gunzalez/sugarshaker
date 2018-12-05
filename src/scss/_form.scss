@@ -75,6 +75,7 @@ form {
     .form-radio {
         position: relative;
         padding-left: 32px;
+        padding-bottom: 10px;
 
         input[type="checkbox"],
         input[type="radio"] {
@@ -83,8 +84,7 @@ form {
             height: 20px;
             position: absolute;
             left: 0;
-            top: 50%;
-            margin-top: -10px;
+            top: 0;
             cursor: pointer;
             transform: scale(1.2);
 
@@ -141,8 +141,7 @@ form {
 
             input[type="checkbox"],
             input[type="radio"]{
-                transform: scale(1.5);
-                margin-top: -6px;
+                transform: scale(1.3);
             }
 
         }

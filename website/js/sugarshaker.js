@@ -97,7 +97,7 @@ DomReady.ready(function() {
 
     sugarShaker.gallery = {
 
-        el: document.querySelector('.gallery-images'),
+        el: document.querySelector('.gallery-images a'),
 
         init: function () {
             if(sugarShaker.gallery.el){
