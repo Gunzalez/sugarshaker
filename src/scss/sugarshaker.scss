@@ -229,7 +229,8 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
     }
 }
 
-.bold {
+.bold,
+strong {
     font-weight: bold;
 }
 
@@ -464,7 +465,7 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
 }
 
 .image-gallery {
-    padding: 10px 0 20px 0;
+    padding-bottom: 20px;
 
     .gallery-stage {
         margin-bottom: 15px;
@@ -541,12 +542,37 @@ figcaption {
     line-height: 140%;
 }
 
+.member {
+
+    h5 {
+
+        span {
+            color: $brand-green;
+        }
+    }
+}
+
 
 
 
 
 
 @media (min-width: $breakpoint3){
+
+
+    .member {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .imagery {
+            padding: 10px 0 20px 0;
+        }
+
+        .copy {
+            padding-top: 0;
+        }
+    }
 
 
     .content {
@@ -879,6 +905,7 @@ figcaption {
 
             .copy {
                 margin: 0;
+                padding-top: 0;
             }
         }
 
@@ -905,14 +932,14 @@ figcaption {
 
 
 .visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
 }
 
 .display-none {
-  display: none !important;
+    display: none !important;
 }
 
