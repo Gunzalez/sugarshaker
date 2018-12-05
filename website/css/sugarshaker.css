@@ -293,8 +293,6 @@ form {
     display: inline-block; }
     .contact-details a:hover {
       color: #262825; }
-      .contact-details a:hover span {
-        text-decoration: underline !important; }
   .contact-details .text {
     line-height: 100%;
     display: none; }
@@ -500,8 +498,7 @@ form {
       color: #006699;
       display: inline-block; }
       .footer li a:hover {
-        color: #262825;
-        text-decoration: underline; }
+        color: #262825; }
 
 .disclaimer {
   padding: 10px 0; }
@@ -552,8 +549,39 @@ form {
       flex: 0 0 auto; }
       .image-gallery .gallery-images a:nth-last-child(1) {
         margin-right: 0; }
+      .image-gallery .gallery-images a img {
+        border: 1px solid white; }
       .image-gallery .gallery-images a.active img {
-        outline: 1px solid #dddddd; }
+        border: 1px solid #dddddd; }
+
+blockquote {
+  position: relative;
+  font-family: CaeciliaLTStd-Italic;
+  font-size: 20px;
+  padding: 0 35px; }
+
+blockquote:before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  content: '\201C';
+  font-size: 4rem;
+  color: #27893e; }
+
+blockquote:after {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  content: '\201D';
+  font-size: 4rem;
+  color: #27893e; }
+
+figcaption {
+  display: block;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 16px;
+  line-height: 140%; }
 
 @media (min-width: 992px) {
   .content {
@@ -577,14 +605,18 @@ form {
         .image-gallery .gallery-images a img {
           width: 100%;
           opacity: 0.5;
-          transition: all 250ms; }
+          transition: opacity 250ms, transform 250ms;
+          border: 0; }
         .image-gallery .gallery-images a:nth-child(3), .image-gallery .gallery-images a:nth-child(6), .image-gallery .gallery-images a:nth-child(9) {
           margin-right: 0; }
         .image-gallery .gallery-images a:hover img {
           transform: scale(1.1);
-          opacity: 1; }
+          opacity: 1;
+          border: 0; }
         .image-gallery .gallery-images a.active img {
-          opacity: 1; }
+          opacity: 1;
+          outline: 1px solid #dddddd;
+          border: 0; }
   .work-example {
     max-width: 320px;
     margin: 10px 20px 30px; }

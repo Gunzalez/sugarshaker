@@ -108,10 +108,15 @@ DomReady.ready(function() {
                 for(var t=0; t<thumbs.length; t++){
                     thumbs[t].addEventListener('click', function (e) {
                         e.preventDefault();
-                        document.querySelector('#main-image').src = e.target.parentNode.href;
-                        document.querySelector('#main-image').alt = e.target.alt;
+                        var link = e.target['parentNode'];
+                        if(!link.classList.contains('active')){
+                            document.querySelectorAll('.gallery-images .active')[0].classList.remove('active');
+                            link.classList.add('active');
+                            document.querySelector('#main-image').src = link.href;
+                            document.querySelector('#main-image').alt = link.title;
+                        }
                     });
-                    // for pre-loading images
+                    // pre-loading images
                     imagesArr[t] = new Image();
                     imagesArr[t].src = thumbs[t].href;
                 }
