@@ -424,6 +424,32 @@ strong {
   max-width: 480px;
   margin: 0 auto;
   padding: 10px 0 20px 0; }
+  .page-detail .detail-row .copy.service {
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: -6px 6px; }
+    .page-detail .detail-row .copy.service .heading {
+      padding: 12px 0 18px 50px; }
+    @media (min-width: 992px) {
+      .page-detail .detail-row .copy.service {
+        width: 350px;
+        background-size: auto;
+        background-position: -20px -20px;
+        padding-left: 115px; }
+        .page-detail .detail-row .copy.service .heading {
+          padding: 0 0 12px 0; } }
+    .page-detail .detail-row .copy.service#service-1 {
+      background-image: url("../images/services/service-eye.png"); }
+    .page-detail .detail-row .copy.service#service-2 {
+      background-image: url("../images/services/service-megaphone.png"); }
+    .page-detail .detail-row .copy.service#service-3 {
+      background-image: url("../images/services/service-pencil.png"); }
+    .page-detail .detail-row .copy.service#service-4 {
+      background-image: url("../images/services/service-pie.png"); }
+    .page-detail .detail-row .copy.service#service-5 {
+      background-image: url("../images/services/service-mouse.png"); }
+    .page-detail .detail-row .copy.service#service-6 {
+      background-image: url("../images/services/service-plus.png"); }
 
 .no-scroll {
   overflow: hidden; }
@@ -854,8 +880,6 @@ figcaption {
         padding-top: 0; }
         .page-detail .detail-row .copy ~ .copy {
           margin-left: 30px; }
-      .page-detail .detail-row .service {
-        width: 300px; }
     .page-detail .title {
       padding-bottom: 20px; }
     .page-detail .imagery {

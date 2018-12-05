@@ -307,6 +307,51 @@ strong {
             max-width: 480px;
             margin: 0 auto;
             padding: 10px 0 20px 0;
+
+            &.service {
+                background-repeat: no-repeat;
+                background-size: 50px;
+                background-position: -6px 6px;
+
+                .heading {
+                    padding: 12px 0 18px 50px;
+                }
+
+                @media (min-width: $breakpoint3){
+                    width: 350px;
+                    background-size: auto;
+                    background-position: -20px -20px;
+                    padding-left: 115px;
+
+                    .heading {
+                        padding: 0 0 12px 0;
+                    }
+                }
+
+                &#service-1 {
+                    background-image: url("../images/services/service-eye.png");
+                }
+
+                &#service-2 {
+                    background-image: url("../images/services/service-megaphone.png");
+                }
+
+                &#service-3 {
+                    background-image: url("../images/services/service-pencil.png");
+                }
+
+                &#service-4 {
+                    background-image: url("../images/services/service-pie.png");
+                }
+
+                &#service-5 {
+                    background-image: url("../images/services/service-mouse.png");
+                }
+
+                &#service-6 {
+                    background-image: url("../images/services/service-plus.png");
+                }
+            }
         }
     }
 }
@@ -633,10 +678,7 @@ figcaption {
 
 
 
-
-
 @media (min-width: $breakpoint3){
-
 
     .member {
         display: flex;
@@ -1006,10 +1048,6 @@ figcaption {
                 & ~ .copy {
                     margin-left: 30px;
                 }
-            }
-
-            .service {
-                width: 300px;
             }
         }
 
