@@ -678,8 +678,7 @@ strong {
     text-align: left; }
     .navigation-box .mobile-only a {
       text-transform: none;
-      color: #262825;
-      font-size: 15px; }
+      color: #006699; }
     @media (min-width: 992px) {
       .navigation-box .mobile-only {
         display: none; } }
