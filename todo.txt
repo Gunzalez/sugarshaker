@@ -19,7 +19,7 @@ DONE
 =============================
 Horizontal lines too long/wide on desktop
 Add horizontal line over footer
-
+Placeholder colour on IE
 
 --------------------------------
 Totals           60 hours so far

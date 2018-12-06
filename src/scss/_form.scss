@@ -132,9 +132,19 @@ form {
         }
 
         .form-row {
-            textarea::placeholder,
-            input::placeholder {
-                color: $brand-lGrey;
+            textarea, input {
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: $brand-lGrey;
+                }
+                &::-moz-placeholder { /* Firefox 19+ */
+                    color: $brand-lGrey;
+                }
+                &:-ms-input-placeholder { /* IE 10+ */
+                    color: $brand-lGrey;
+                }
+                &:-moz-placeholder { /* Firefox 18- */
+                    color: $brand-lGrey;
+                }
             }
         }
 
