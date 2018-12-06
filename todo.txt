@@ -7,7 +7,6 @@ Index logo list (animated)
 Restyling header/sticky etc
 Index carousel animation
 Header background animation
-Font error on all browsers
 Other IE warnings
 Form validation JS
 Find photo and content for me
@@ -20,6 +19,7 @@ DONE
 Horizontal lines too long/wide on desktop
 Add horizontal line over footer
 Placeholder colour on IE
+Font error on all browsers
 
 --------------------------------
 Totals           60 hours so far
