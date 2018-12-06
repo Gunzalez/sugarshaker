@@ -605,12 +605,6 @@ strong {
       .page-detail .imagery img {
         max-width: 284px; } }
 
-.no-scroll {
-  overflow: hidden; }
-  @media (min-width: 992px) {
-    .no-scroll {
-      overflow: scroll; } }
-
 .page-navigation {
   position: fixed;
   background: white;

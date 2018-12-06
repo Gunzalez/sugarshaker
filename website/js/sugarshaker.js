@@ -80,7 +80,6 @@ DomReady.ready(function() {
                 setTimeout(function () {
                     sugarShaker.navigation.el.classList.add('on');
                 }, 0);
-                document.body.classList.add('no-scroll');
             }
         },
 
@@ -90,7 +89,6 @@ DomReady.ready(function() {
                 setTimeout(function () {
                     sugarShaker.navigation.el.classList.remove('show');
                 }, 250);
-                document.body.classList.remove('no-scroll');
             }
         }
     };

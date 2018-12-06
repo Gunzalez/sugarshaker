@@ -590,14 +590,6 @@ strong {
     }
 }
 
-.no-scroll {
-    overflow: hidden;
-
-    @media (min-width: $breakpoint3) {
-        overflow: scroll;
-    }
-}
-
 .page-navigation {
     position: fixed;
     background: white;
