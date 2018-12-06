@@ -173,10 +173,7 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
     padding: 0 20px;
 
     @media (min-width: $breakpoint3) {
-
-        .content {
-            padding: 0 40px;
-        }
+        padding: 0 40px;
     }
 }
 
@@ -712,10 +709,8 @@ strong {
 }
 
 .client-logos {
-    border-top: $borerLine;
     border-bottom: $borerLine;
     min-height: 150px;
-    margin: 0 0 10px;
 }
 
 .footer {
@@ -744,6 +739,10 @@ strong {
                 color: $brand-black;
             }
         }
+    }
+
+    .footer-inner {
+        border-top: $borerLine;
     }
 
     @media (min-width: $breakpoint3) {

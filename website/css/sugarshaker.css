@@ -131,6 +131,7 @@ form {
   form select.form-control,
   form input[type="text"].form-control,
   form input[type="email"].form-control,
+  form input[type="tel"].form-control,
   form input[type="number"].form-control,
   form input[type="password"].form-control,
   form textarea.form-control {
@@ -183,6 +184,7 @@ form {
   form .error select.form-control,
   form .error input[type="text"].form-control,
   form .error input[type="email"].form-control,
+  form .error input[type="tel"].form-control,
   form .error input[type="number"].form-control,
   form .error input[type="password"].form-control,
   form .error textarea.form-control {
@@ -204,7 +206,8 @@ form {
       form .form-check input[type="radio"],
       form .form-radio input[type="checkbox"],
       form .form-radio input[type="radio"] {
-        transform: scale(1.3); } }
+        transform: scale(1.3);
+        margin-top: 0; } }
 
 .page {
   max-width: 1220px;
@@ -322,7 +325,7 @@ form {
 .content {
   padding: 0 20px; }
   @media (min-width: 992px) {
-    .content .content {
+    .content {
       padding: 0 40px; } }
 
 .contact-details {
@@ -676,10 +679,8 @@ strong {
       width: 250px; } }
 
 .client-logos {
-  border-top: 2px solid #eaeaea;
   border-bottom: 2px solid #eaeaea;
-  min-height: 150px;
-  margin: 0 0 10px; }
+  min-height: 150px; }
 
 .footer {
   padding: 0 20px 20px;
@@ -700,6 +701,8 @@ strong {
       display: inline-block; }
       .footer li a:hover {
         color: #262825; }
+  .footer .footer-inner {
+    border-top: 2px solid #eaeaea; }
   @media (min-width: 992px) {
     .footer {
       padding: 0 40px 40px;

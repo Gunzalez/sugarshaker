@@ -1,11 +1,10 @@
 
-Stuff to do
+
+TODO
 =============================
 UL list items showing (IE)
 Index logo list (animated)
 Restyling header/sticky etc
-Horizontal lines too long/wide on desktop
-Add horizontal line over footer
 Index carousel animation
 Header background animation
 Font error on all browsers
@@ -16,7 +15,10 @@ General page with all markup
 
 
 
-
+DONE
+=============================
+Horizontal lines too long/wide on desktop
+Add horizontal line over footer
 
 
 --------------------------------
