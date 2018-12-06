@@ -5,15 +5,21 @@ DomReady.ready(function() {
     var utils = {
 
         show: function (el) {
-            el.classList.add('active');
+            el.classList.add('enter');
             var timer = setTimeout(function () {
                 el.classList.add('active');
+                el.classList.remove('enter');
                 clearTimeout(timer)
             }, 250)
         },
 
         hide: function (el) {
-            el.classList.remove('active');
+            el.classList.add('leave');
+            var timer = setTimeout(function () {
+                el.classList.remove('active');
+                el.classList.remove('leave');
+                clearTimeout(timer)
+            }, 250)
         }
     };
 

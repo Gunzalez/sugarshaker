@@ -423,13 +423,20 @@ form {
     overflow: hidden;
     position: relative; }
     .tabs-section .tabs-content .tab-content {
+      transition: opacity 500ms, background-position 500ms;
       padding: 20px 0;
       position: absolute;
       top: 0;
       left: 0;
-      display: none; }
+      display: block;
+      opacity: 0; }
       .tabs-section .tabs-content .tab-content.active {
-        display: block; }
+        display: block;
+        opacity: 1; }
+      .tabs-section .tabs-content .tab-content.enter {
+        opacity: 1; }
+      .tabs-section .tabs-content .tab-content.leave {
+        opacity: 0; }
     .tabs-section .tabs-content .tab-box .title {
       text-align: left; }
     .tabs-section .tabs-content .tab-box .copy {
@@ -480,15 +487,12 @@ form {
             left: 0;
             background: #27893e; }
       .tabs-section .tabs-content {
-        height: 434px; }
+        height: 434px;
+        margin: 0 -40px; }
         .tabs-section .tabs-content .tab-content {
           padding: 30px 40px;
-          margin: 0 -40px;
           height: 434px;
           background-repeat: no-repeat;
-          transition: opacity 250ms, background-position 250ms;
-          opacity: 0;
-          display: none;
           background-position: -260px 0; }
           .tabs-section .tabs-content .tab-content#design {
             background-image: url("../images/bg-design.png"); }
@@ -496,10 +500,10 @@ form {
             background-image: url("../images/bg-consultancy.png"); }
           .tabs-section .tabs-content .tab-content#engineering {
             background-image: url("../images/bg-engineering.png"); }
-          .tabs-section .tabs-content .tab-content.active {
-            opacity: 1;
-            display: block;
+          .tabs-section .tabs-content .tab-content.enter, .tabs-section .tabs-content .tab-content.active {
             background-position: 0 0; }
+          .tabs-section .tabs-content .tab-content.leave {
+            background-position: -260px 0; }
       .tabs-section .tab-box {
         border-top: 2px solid #eaeaea;
         border-bottom: 2px solid #eaeaea;

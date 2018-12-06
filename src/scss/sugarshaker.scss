@@ -302,14 +302,25 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
         position: relative;
 
         .tab-content {
+            transition: opacity 500ms, background-position 500ms;
             padding: 20px 0;
             position: absolute;
             top: 0;
             left: 0;
-            display: none;
+            display: block;
+            opacity: 0;
 
             &.active {
                 display: block;
+                opacity: 1;
+            }
+
+            &.enter {
+                opacity: 1;
+            }
+
+            &.leave {
+                opacity: 0;
             }
         }
 
@@ -392,15 +403,12 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
 
         .tabs-content {
             height: 434px;
+            margin: 0 -40px;
 
             .tab-content {
                 padding: 30px 40px;
-                margin: 0 -40px;
                 height: 434px;
                 background-repeat: no-repeat;
-                transition: opacity 250ms, background-position 250ms;
-                opacity: 0;
-                display: none;
                 background-position: -260px 0;
 
                 &#design {
@@ -415,10 +423,13 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
                     background-image: url("../images/bg-engineering.png");
                 }
 
+                &.enter,
                 &.active {
-                    opacity: 1;
-                    display: block;
                     background-position: 0 0;
+                }
+
+                &.leave {
+                    background-position: -260px 0;
                 }
             }
         }
