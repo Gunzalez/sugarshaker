@@ -51,7 +51,7 @@ DomReady.ready(function() {
                 imgArr = [];
             for(var b=0; b < backgrounds.length; b++){
                 imgArr[b] = new Image();
-                imgArr[b].src = '../images/' + backgrounds[b] + '.png';
+                imgArr[b].src = 'images/' + backgrounds[b] + '.png';
             }
 
             // attach events

@@ -423,16 +423,18 @@ form {
     overflow: hidden;
     position: relative; }
     .tabs-section .tabs-content .tab-content {
-      transition: opacity 500ms, background-position 500ms;
+      transition: opacity 250ms, background-position ease-out 500ms;
       padding: 20px 0;
       position: absolute;
       top: 0;
       left: 0;
       display: block;
-      opacity: 0; }
+      opacity: 0;
+      z-index: 5; }
       .tabs-section .tabs-content .tab-content.active {
         display: block;
-        opacity: 1; }
+        opacity: 1;
+        z-index: 7; }
       .tabs-section .tabs-content .tab-content.enter {
         opacity: 1; }
       .tabs-section .tabs-content .tab-content.leave {
