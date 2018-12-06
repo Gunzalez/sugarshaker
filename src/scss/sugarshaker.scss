@@ -481,9 +481,16 @@ strong {
     text-align: center;
     border: none;
     cursor: pointer;
+    transition: transform 50ms, background 50ms;
 
     @media (min-width: $breakpoint3){
         width: auto;
+    }
+
+    &:active {
+        transform: scale(0.95);
+        background-color: $brand-black;
+
     }
 }
 

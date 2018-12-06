@@ -541,10 +541,14 @@ strong {
   width: 100%;
   text-align: center;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: transform 50ms, background 50ms; }
   @media (min-width: 992px) {
     .btn {
       width: auto; } }
+  .btn:active {
+    transform: scale(0.95);
+    background-color: #262825; }
 
 .page-header {
   text-align: center;
