@@ -297,9 +297,15 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
     }
 
     .tabs-content {
+        height: 340px;
+        overflow: hidden;
+        position: relative;
 
         .tab-content {
             padding: 20px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
             display: none;
 
             &.active {
@@ -385,22 +391,34 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
         }
 
         .tabs-content {
+            height: 434px;
 
             .tab-content {
                 padding: 30px 40px;
                 margin: 0 -40px;
-                min-height: 434px;
+                height: 434px;
+                background-repeat: no-repeat;
+                transition: opacity 250ms, background-position 250ms;
+                opacity: 0;
+                display: none;
+                background-position: -260px 0;
 
                 &#design {
-                  background: url("../images/bg-design.png") center left no-repeat;
+                    background-image: url("../images/bg-design.png");
                 }
 
                 &#consultancy {
-                  background: url("../images/bg-consultancy.png") center left no-repeat;
+                    background-image: url("../images/bg-consultancy.png");
                 }
 
                 &#engineering {
-                  background: url("../images/bg-engineering.png") center left no-repeat;
+                    background-image: url("../images/bg-engineering.png");
+                }
+
+                &.active {
+                    opacity: 1;
+                    display: block;
+                    background-position: 0 0;
                 }
             }
         }
@@ -640,7 +658,7 @@ strong {
     > ul {
         text-align: right;
         padding: 0 35px;
-        display: inline-block;
+        float: right;
         width: 100%;
     }
 

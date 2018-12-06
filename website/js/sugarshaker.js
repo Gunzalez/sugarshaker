@@ -2,6 +2,21 @@ DomReady.ready(function() {
 
     var sugarShaker = {};
 
+    var utils = {
+
+        show: function (el) {
+            el.classList.add('active');
+            var timer = setTimeout(function () {
+                el.classList.add('active');
+                clearTimeout(timer)
+            }, 250)
+        },
+
+        hide: function (el) {
+            el.classList.remove('active');
+        }
+    };
+
     sugarShaker.header = {
 
         scroll: function () {
@@ -25,6 +40,15 @@ DomReady.ready(function() {
 
             var links = document.querySelectorAll('#tabs .tab');
 
+            // pre-loading
+            var backgrounds = ['bg-design', 'bg-engineering', 'bg-consultancy'],
+                imgArr = [];
+            for(var b=0; b < backgrounds.length; b++){
+                imgArr[b] = new Image();
+                imgArr[b].src = '../images/' + backgrounds[b] + '.png';
+            }
+
+            // attach events
             if(links){
 
                 for(var l=0; l < links.length; l++){
@@ -35,11 +59,16 @@ DomReady.ready(function() {
 
                         if(!e.target.classList.contains('active')){
 
+                            // swap active class on tabs
                             document.querySelectorAll('#tabs .active')[0].classList.remove('active');
                             e.target.classList.add('active');
-                            document.querySelectorAll('#tabs-content .active')[0].classList.remove('active');
-                            var index = [].slice.call(document.querySelectorAll('#tabs .tab')).indexOf(e.target);
-                            document.querySelectorAll('#tabs-content .tab-content')[index].classList.add('active');
+
+                            // get content reference
+                            var contentID = e.target.getAttribute('data-tab-content');
+
+                            // swap active class on tab content
+                            utils.hide(document.querySelectorAll('#tabs-content .active')[0]);
+                            utils.show(document.getElementById(contentID));
                         }
 
                         if(sugarShaker.navigation.el.classList.contains('show')){

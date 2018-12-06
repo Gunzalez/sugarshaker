@@ -418,17 +418,24 @@ form {
           width: 100%;
           left: 0;
           background: #27893e; }
-  .tabs-section .tabs-content .tab-content {
-    padding: 20px 0;
-    display: none; }
-    .tabs-section .tabs-content .tab-content.active {
-      display: block; }
-  .tabs-section .tabs-content .tab-box .title {
-    text-align: left; }
-  .tabs-section .tabs-content .tab-box .copy {
-    font-family: CaeciliaLTStd-Light;
-    font-size: 18px;
-    padding-bottom: 10px; }
+  .tabs-section .tabs-content {
+    height: 340px;
+    overflow: hidden;
+    position: relative; }
+    .tabs-section .tabs-content .tab-content {
+      padding: 20px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+      .tabs-section .tabs-content .tab-content.active {
+        display: block; }
+    .tabs-section .tabs-content .tab-box .title {
+      text-align: left; }
+    .tabs-section .tabs-content .tab-box .copy {
+      font-family: CaeciliaLTStd-Light;
+      font-size: 18px;
+      padding-bottom: 10px; }
   @media (min-width: 992px) {
     .tabs-section {
       background: transparent;
@@ -472,16 +479,27 @@ form {
             width: 100%;
             left: 0;
             background: #27893e; }
-      .tabs-section .tabs-content .tab-content {
-        padding: 30px 40px;
-        margin: 0 -40px;
-        min-height: 434px; }
-        .tabs-section .tabs-content .tab-content#design {
-          background: url("../images/bg-design.png") center left no-repeat; }
-        .tabs-section .tabs-content .tab-content#consultancy {
-          background: url("../images/bg-consultancy.png") center left no-repeat; }
-        .tabs-section .tabs-content .tab-content#engineering {
-          background: url("../images/bg-engineering.png") center left no-repeat; }
+      .tabs-section .tabs-content {
+        height: 434px; }
+        .tabs-section .tabs-content .tab-content {
+          padding: 30px 40px;
+          margin: 0 -40px;
+          height: 434px;
+          background-repeat: no-repeat;
+          transition: opacity 250ms, background-position 250ms;
+          opacity: 0;
+          display: none;
+          background-position: -260px 0; }
+          .tabs-section .tabs-content .tab-content#design {
+            background-image: url("../images/bg-design.png"); }
+          .tabs-section .tabs-content .tab-content#consultancy {
+            background-image: url("../images/bg-consultancy.png"); }
+          .tabs-section .tabs-content .tab-content#engineering {
+            background-image: url("../images/bg-engineering.png"); }
+          .tabs-section .tabs-content .tab-content.active {
+            opacity: 1;
+            display: block;
+            background-position: 0 0; }
       .tabs-section .tab-box {
         border-top: 2px solid #eaeaea;
         border-bottom: 2px solid #eaeaea;
@@ -644,7 +662,7 @@ strong {
   .navigation-box > ul {
     text-align: right;
     padding: 0 35px;
-    display: inline-block;
+    float: right;
     width: 100%; }
   .navigation-box li {
     border-top: 2px solid #eaeaea;
