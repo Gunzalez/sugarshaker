@@ -821,6 +821,10 @@ strong {
 
     @media (min-width: $breakpoint3) {
         text-align: left;
+        min-height: 284px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 

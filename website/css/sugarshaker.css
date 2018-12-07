@@ -83,7 +83,10 @@ p {
 
 a {
   color: #006699;
-  font-weight: 400; }
+  font-weight: 400;
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
 
 @font-face {
   font-family: 'CaeciliaLTStd-Bold';
@@ -755,7 +758,11 @@ strong {
     text-decoration: none; }
   @media (min-width: 992px) {
     .address {
-      text-align: left; } }
+      text-align: left;
+      min-height: 284px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
 
 .work-example {
   margin: 0 30px 30px;

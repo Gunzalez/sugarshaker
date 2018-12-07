@@ -100,7 +100,7 @@ DomReady.ready(function() {
 
                 var screenWidth = window.innerWidth,
                     pageWith = document.querySelectorAll('.page')[0].offsetWidth,
-                    rightMargin = (screenWidth - pageWith)/2 - 6;
+                    rightMargin = (screenWidth - pageWith)/2 - 7;
 
                 rightMargin = rightMargin > 0 ? rightMargin : 0;
                 sugarShaker.navigation.el.style.marginRight = rightMargin + 'px';
@@ -163,7 +163,7 @@ DomReady.ready(function() {
 
     sugarShaker.tabs.init();
 
-    window.onresize = function() {
+    window['onresize'] = function() {
 
         var newWidth = window.innerWidth,
             oldWidth = props.screenWidth;
