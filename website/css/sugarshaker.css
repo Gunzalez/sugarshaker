@@ -512,6 +512,12 @@ form {
       font-family: CaeciliaLTStd-Light;
       font-size: 18px;
       padding-bottom: 10px; }
+  @media (min-width: 768px) {
+    .tabs-section .tabs a {
+      font-size: 26px; }
+    .tabs-section .tabs-content {
+      height: 270px;
+      margin: 0 10%; } }
   @media (min-width: 992px) {
     .tabs-section {
       background: transparent;

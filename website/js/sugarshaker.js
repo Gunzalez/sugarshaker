@@ -2,6 +2,10 @@ DomReady.ready(function() {
 
     var sugarShaker = {};
 
+    var props = {
+        screenWidth: window.innerWidth
+    };
+
     var utils = {
 
         show: function (el) {
@@ -19,23 +23,6 @@ DomReady.ready(function() {
                 el.classList.remove('active','leave');
                 clearTimeout(timer)
             }, 250)
-        }
-    };
-
-    sugarShaker.header = {
-
-        scroll: function () {
-            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                document.getElementsByTagName("body")[0].classList.add('fixed');
-            } else {
-                document.getElementsByTagName("body")[0].classList.remove('fixed');
-            }
-
-            if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25 ) {
-                document.getElementById("header").classList.add('smaller');
-            } else {
-                document.getElementById("header").classList.remove('smaller');
-            }
         }
     };
 
@@ -176,12 +163,14 @@ DomReady.ready(function() {
 
     sugarShaker.tabs.init();
 
-    window.onscroll = function() {
-        //sugarShaker.header.scroll();
-    };
-
     window.onresize = function() {
-        sugarShaker.navigation.resize();
-    };
 
+        var newWidth = window.innerWidth,
+            oldWidth = props.screenWidth;
+
+        if (oldWidth !== newWidth) {
+            props.screenWidth = newWidth;
+            sugarShaker.navigation.resize();
+        }
+    };
 });

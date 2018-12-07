@@ -445,6 +445,22 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
         }
     }
 
+    @media (min-width: $breakpoint2) {
+
+        .tabs {
+
+            a {
+                font-size: 26px;
+            }
+        }
+
+        .tabs-content {
+            height: 270px;
+            margin: 0 10%;
+        }
+
+    }
+
     @media (min-width: $breakpoint3) {
         background: transparent;
         margin-bottom: 0;

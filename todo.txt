@@ -3,10 +3,10 @@
 TODO
 =============================
 UL list items showing (IE) (bug)
-Index logo list (animated)
-Header background animation
-Form validation JS
+Home page logo list (animated)
+Header background animation - Needs Doyle for input and assets
 Find photo and content for me
+Overflow no scroll on mobile devices
 
 
 
@@ -16,6 +16,7 @@ Find photo and content for me
 
 DOING
 ==============================
+Form validation JS
 
 
 
@@ -32,6 +33,6 @@ Placeholder colour on IE
 Font error on all browsers
 Other IE warnings (Most)
 Index carousel animation
-
+Improves tablet layout
 
 
