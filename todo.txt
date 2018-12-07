@@ -16,7 +16,7 @@ Overflow no scroll on mobile devices
 
 DOING
 ==============================
-Form validation JS
+autoplay carousel
 
 
 
@@ -26,6 +26,7 @@ Form validation JS
 
 DONE
 =============================
+Form validation JS
 Restyling header/sticky etc
 Horizontal Lines on desktop
 Add horizontal line over footer

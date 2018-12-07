@@ -23,6 +23,20 @@ DomReady.ready(function() {
                 el.classList.remove('active','leave');
                 clearTimeout(timer)
             }, 250)
+        },
+
+        isValidEmail: function (value) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(value);
+        },
+
+        isEmptyOrNull: function (value) {
+            return value.trim().length < 1
+            // return value.trim().length < 1 ? true : false
+        },
+
+        reportError: function (field) {
+            field.parentNode.classList.add('error');
         }
     };
 
@@ -68,6 +82,56 @@ DomReady.ready(function() {
                         }
                     };
                 }
+            }
+        }
+    };
+
+    sugarShaker.contact = {
+
+        el: document.getElementById('contact-form'),
+
+        props: {
+            error: false
+        },
+
+        validate: function(field){
+            if(field.type === 'checkbox'){
+                if(!field.checked){
+                    this.props.error = true;
+                    utils.reportError(field.parentNode);
+                }
+            } else if (field.type === 'email') {
+                if(!utils.isValidEmail(field.value)){
+                    this.props.error = true;
+                    utils.reportError(field);
+                }
+            } else {
+                if (utils.isEmptyOrNull(field.value)) {
+                    this.props.error = true;
+                    utils.reportError(field);
+                }
+            }
+        },
+
+        init: function () {
+            if(this.el){
+                this.el.addEventListener('submit', function (event) {
+
+                    sugarShaker.contact.props.error = false;
+                    var erroredFields = document.querySelectorAll('.error');
+                    for(var e=0; e<erroredFields.length; e++){
+                        erroredFields[e].classList.remove('error');
+                    }
+
+                    var requiredFields = document.querySelectorAll('[required]');
+                    for(var r=0; r<requiredFields.length; r++){
+                        sugarShaker.contact.validate(requiredFields[r]);
+                    }
+
+                    if(sugarShaker.contact.props.error){
+                        event.preventDefault();
+                    }
+                })
             }
         }
     };
@@ -162,6 +226,8 @@ DomReady.ready(function() {
     sugarShaker.navigation.init();
 
     sugarShaker.tabs.init();
+
+    sugarShaker.contact.init();
 
     window['onresize'] = function() {
 
