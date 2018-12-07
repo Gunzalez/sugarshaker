@@ -161,11 +161,117 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 20;
+    z-index: 12;
 
     @media (min-width: $breakpoint3){
         top: 30px;
         right: 35px;
+    }
+}
+
+.page-navigation {
+    position: fixed;
+    background: white;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 250ms;
+
+    &.show {
+        display: block;
+    }
+
+    &.on {
+        opacity: 1;
+    }
+
+    @media (min-width: $breakpoint3){
+        background: rgba(255, 255, 255, 0.9);
+        top: auto;
+        left: auto;
+        width: 300px;
+        height: 100vh;
+        border-left: 1px solid $brand-lGrey;
+    }
+}
+
+.navigation-box {
+    padding: 0;
+    text-align: right;
+
+    #close {
+        margin: 23px 33px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    > ul {
+        text-align: right;
+        padding: 0 35px;
+        float: right;
+        width: 100%;
+    }
+
+    li {
+        border-top: $borerLine;
+        padding: 5px 0;
+
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $brand-black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 7px 0;
+            display: block;
+        }
+
+        &:nth-child(1){
+            border-top: none;
+        }
+
+        ul {
+            padding-bottom: 10px;
+        }
+
+        li {
+            border-top: none;
+
+            a {
+                text-transform: none;
+                color: $brand-blue;
+                font-size: 16px;
+                padding: 6px 0;
+            }
+        }
+    }
+
+    .mobile-only {
+        text-align: left;
+
+        a {
+            text-transform: none;
+            color: $brand-blue;
+        }
+
+        @media (min-width: $breakpoint3){
+            display: none;
+        }
+    }
+
+    @media (min-width: $breakpoint3){
+
+        > ul {
+            width: 250px;
+        }
     }
 }
 
@@ -244,7 +350,6 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
         }
     }
 }
-
 
 .tabs-section {
     margin-bottom: 30px;
@@ -481,10 +586,14 @@ strong {
     text-align: center;
     border: none;
     cursor: pointer;
-    transition: transform 50ms, background 50ms;
+    transition: transform 250ms, background 500ms;
 
     @media (min-width: $breakpoint3){
         width: auto;
+    }
+
+    &:hover {
+        background-color: $brand-black;
     }
 
     &:active {
@@ -624,115 +733,6 @@ strong {
             img {
                 max-width: 284px;
             }
-        }
-    }
-}
-
-.page-navigation {
-    position: fixed;
-    background: white;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    top: 0;
-    right: 0;
-    display: none;
-    opacity: 0;
-    transition: opacity 250ms;
-
-    &.show {
-        display: block;
-    }
-
-    &.on {
-        opacity: 1;
-    }
-
-    @media (min-width: $breakpoint3){
-        position: absolute;
-        background: rgba(255, 255, 255, 0.9);
-        right: -35px;
-        top: -30px;
-        left: auto;
-        width: 300px;
-        bottom: 0;
-        height: 100vh;
-        border-left: 1px solid $brand-lGrey;
-    }
-}
-
-.navigation-box {
-    padding: 0;
-    text-align: right;
-
-    #close {
-        margin: 23px 33px;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    > ul {
-        text-align: right;
-        padding: 0 35px;
-        float: right;
-        width: 100%;
-    }
-
-    li {
-        border-top: $borerLine;
-        padding: 5px 0;
-
-        a {
-            text-transform: uppercase;
-            text-decoration: none;
-            color: $brand-black;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 7px 0;
-            display: block;
-        }
-
-        &:nth-child(1){
-            border-top: none;
-        }
-
-        ul {
-            padding-bottom: 10px;
-        }
-
-        li {
-            border-top: none;
-
-            a {
-                text-transform: none;
-                color: $brand-blue;
-                font-size: 16px;
-                padding: 6px 0;
-            }
-        }
-    }
-
-    .mobile-only {
-        text-align: left;
-
-        a {
-            text-transform: none;
-            color: $brand-blue;
-        }
-
-        @media (min-width: $breakpoint3){
-            display: none;
-        }
-    }
-
-    @media (min-width: $breakpoint3){
-
-        > ul {
-            width: 250px;
         }
     }
 }
@@ -1082,14 +1082,13 @@ blockquote {
         padding-left: 22px;
     }
 }
-
-
-
-
-
-
 /* ------ utils -------------*/
 
+.anchor {
+    position: relative;
+    top: -50px;
+    visibility:hidden;
+}
 
 .visually-hidden {
     position: absolute;

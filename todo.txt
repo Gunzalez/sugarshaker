@@ -16,7 +16,6 @@ Find photo and content for me
 
 DOING
 ==============================
-Restyling header/sticky etc
 
 
 
@@ -26,6 +25,7 @@ Restyling header/sticky etc
 
 DONE
 =============================
+Restyling header/sticky etc
 Horizontal Lines on desktop
 Add horizontal line over footer
 Placeholder colour on IE
