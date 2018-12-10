@@ -754,11 +754,6 @@ strong {
     }
 }
 
-.client-logos {
-    border-bottom: $borerLine;
-    min-height: 150px;
-}
-
 .footer {
     padding: 0 20px 20px;
     text-align: center;
@@ -1115,6 +1110,49 @@ blockquote {
             display: inline-block;
             width: 1.8em;
             margin-left: -1.8em;
+        }
+    }
+}
+
+.client-logos {
+    border-bottom: $borerLine;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        border-left: 1px solid $brand-lGrey;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0;
+        border-right: 1px solid $brand-lGrey;
+
+        img {
+            padding: 15px;
+            max-width: 150px;
+            display: inline;
+        }
+    }
+
+    @media (min-width: $breakpoint3){
+        overflow: hidden;
+
+        ul {
+            border-left: none;
+            justify-content: space-between;
+
+            li {
+                border-right: none;
+
+                img {
+                    padding: 25px 0;
+                }
+            }
         }
     }
 }

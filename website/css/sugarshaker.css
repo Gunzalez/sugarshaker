@@ -712,10 +712,6 @@ strong {
       .page-detail .imagery img {
         max-width: 284px; } }
 
-.client-logos {
-  border-bottom: 2px solid #eaeaea;
-  min-height: 150px; }
-
 .footer {
   padding: 0 20px 20px;
   text-align: center;
@@ -948,6 +944,35 @@ blockquote {
     display: inline-block;
     width: 1.8em;
     margin-left: -1.8em; }
+
+.client-logos {
+  border-bottom: 2px solid #eaeaea;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
+  .client-logos ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #f5f5f5; }
+  .client-logos li {
+    display: inline-block;
+    padding: 0;
+    border-right: 1px solid #f5f5f5; }
+    .client-logos li img {
+      padding: 15px;
+      max-width: 150px;
+      display: inline; }
+  @media (min-width: 992px) {
+    .client-logos {
+      overflow: hidden; }
+      .client-logos ul {
+        border-left: none;
+        justify-content: space-between; }
+        .client-logos ul li {
+          border-right: none; }
+          .client-logos ul li img {
+            padding: 25px 0; } }
 
 /* ------ utils -------------*/
 .anchor {
