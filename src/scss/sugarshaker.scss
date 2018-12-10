@@ -11,7 +11,7 @@ $borerLine:     2px solid lighten($brand-grey, 65%);
     position: relative;
     overflow: hidden;
     background-image: url("../images/bg-page.png");
-    transition: background .250s;
+    transition: background 2s;
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
