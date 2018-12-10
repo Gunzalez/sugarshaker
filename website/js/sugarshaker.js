@@ -339,7 +339,7 @@ DomReady.ready(function() {
                     bgIndex = 0
                 }
                 sugarShaker.pageBackground.el.style.backgroundImage = "url('images/" + sugarShaker.pageBackground.props.bgs[bgIndex] + ".png')";
-            }, 8000);
+            }, 7000);
 
         },
 
