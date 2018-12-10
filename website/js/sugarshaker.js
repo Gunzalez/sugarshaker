@@ -279,6 +279,78 @@ DomReady.ready(function() {
         }
     };
 
+    sugarShaker.pageBackground = {
+
+        el: document.querySelectorAll('.page')[0],
+
+        props: {
+            bgs: ['bg-page','bg-page-2','bg-page-3']
+        },
+
+        preLoad: function(Images, Callback){
+
+            // Keep the count of the verified images
+            var allLoaded = 0;
+
+            // The object that will be returned in the callback
+            var _log = {
+                success: [],
+                error: []
+            };
+
+            // Executed every time an img is successfully or wrong loaded
+            var verifier = function(){
+                allLoaded++;
+
+                // triggers the end callback when all images has been tested
+                if(allLoaded === Images.length){
+                    Callback.call(undefined, _log);
+                }
+            };
+
+            for (var index = 0; index < Images.length; index++) {
+
+                // Prevent that index has the same value by wrapping it inside an anonymous fn
+                (function(i){
+                    // Image path provided in the array e.g image.png
+                    var imgSource = 'images/' + Images[i] + '.png',
+                        img = new Image();
+
+                    img.addEventListener("load", function(){
+                        _log.success.push(imgSource);
+                        verifier();
+                    }, false);
+
+                    img.addEventListener("error", function(){
+                        _log.error.push(imgSource);
+                        verifier();
+                    }, false);
+
+                    img.src = imgSource;
+                })(index);
+            }
+        },
+
+        autoPlay: function(_){
+            var bgIndex = 0;
+            setInterval(function () {
+                console.log('images/' + sugarShaker.pageBackground.props.bgs[bgIndex] + '.png');
+                bgIndex++;
+                if(bgIndex === sugarShaker.pageBackground.props.bgs.length){
+                    bgIndex = 0
+                }
+                sugarShaker.pageBackground.el.style.backgroundImage = "url('images/" + sugarShaker.pageBackground.props.bgs[bgIndex] + ".png')";
+            }, 8000);
+
+        },
+
+        init: function () {
+            sugarShaker.pageBackground.preLoad(sugarShaker.pageBackground.props.bgs, sugarShaker.pageBackground.autoPlay)
+        }
+    };
+
+    sugarShaker.pageBackground.init();
+
     sugarShaker.gallery.init();
 
     sugarShaker.navigation.init();
