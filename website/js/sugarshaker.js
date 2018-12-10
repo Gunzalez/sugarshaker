@@ -334,7 +334,6 @@ DomReady.ready(function() {
         autoPlay: function(_){
             var bgIndex = 0;
             setInterval(function () {
-                console.log('images/' + sugarShaker.pageBackground.props.bgs[bgIndex] + '.png');
                 bgIndex++;
                 if(bgIndex === sugarShaker.pageBackground.props.bgs.length){
                     bgIndex = 0
