@@ -271,6 +271,7 @@ DomReady.ready(function() {
                             document.querySelector('#main-image').alt = link.title;
                         }
                     });
+
                     // pre-loading images
                     imagesArr[t] = new Image();
                     imagesArr[t].src = thumbs[t].href;
@@ -336,15 +337,14 @@ DomReady.ready(function() {
             setInterval(function () {
                 bgIndex++;
                 if(bgIndex === sugarShaker.pageBackground.props.bgs.length){
-                    bgIndex = 0
+                    bgIndex = 0;
                 }
                 sugarShaker.pageBackground.el.style.backgroundImage = "url('images/" + sugarShaker.pageBackground.props.bgs[bgIndex] + ".png')";
             }, 7000);
-
         },
 
         init: function () {
-            sugarShaker.pageBackground.preLoad(sugarShaker.pageBackground.props.bgs, sugarShaker.pageBackground.autoPlay)
+            sugarShaker.pageBackground.preLoad(sugarShaker.pageBackground.props.bgs, sugarShaker.pageBackground.autoPlay);
         }
     };
 
