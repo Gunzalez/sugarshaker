@@ -78,8 +78,8 @@ h5 {
   font-size: 17px; }
 
 p {
-  line-height: 130%;
-  padding-bottom: 12px; }
+  line-height: 120%;
+  padding-bottom: 15px; }
 
 a {
   color: #006699;
@@ -929,7 +929,7 @@ blockquote {
 .copy ul, .copy ol {
   padding-left: 15px; }
   .copy ul li, .copy ol li {
-    padding-bottom: 5px;
+    padding-bottom: 12px;
     line-height: 130%;
     padding-left: 5px; }
   .copy ul li:nth-child(even), .copy ol li:nth-child(even) {
@@ -937,6 +937,16 @@ blockquote {
 
 .copy ul {
   padding-left: 22px; }
+
+.green-dots {
+  list-style: none; }
+  .green-dots li::before {
+    content: "\2022";
+    color: #27893e;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.8em;
+    margin-left: -1.8em; }
 
 /* ------ utils -------------*/
 .anchor {

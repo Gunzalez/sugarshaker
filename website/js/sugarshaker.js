@@ -13,16 +13,16 @@ DomReady.ready(function() {
             var timer = setTimeout(function () {
                 el.classList.add('active');
                 el.classList.remove('enter');
-                clearTimeout(timer)
-            }, 250)
+                clearTimeout(timer);
+            }, 250);
         },
 
         hide: function (el) {
             el.classList.add('leave');
             var timer = setTimeout(function () {
                 el.classList.remove('active', 'leave');
-                clearTimeout(timer)
-            }, 250)
+                clearTimeout(timer);
+            }, 250);
         },
 
         isValidEmail: function (value) {
@@ -31,8 +31,7 @@ DomReady.ready(function() {
         },
 
         isEmptyOrNull: function (value) {
-            return value.trim().length < 1
-            // return value.trim().length < 1 ? true : false
+            return value.trim().length < 1;
         },
 
         reportError: function (field) {
@@ -46,33 +45,51 @@ DomReady.ready(function() {
             autoPlay: true
         },
 
+        startAutoPlay: function(){
+            if(sugarShaker.tabs.props.autoPlay){
+
+                var container = document.getElementById('tabs-content');
+
+                container.addEventListener('mouseenter', function (event) {
+                    event.target.classList.add('hovering');
+                });
+                container.addEventListener('mouseleave', function (event) {
+                    event.target.classList.remove('hovering');
+                });
+                sugarShaker.tabs.autoPlay();
+            }
+        },
+
         autoPlay: function(){
 
             var loop = setInterval(function () {
                 if(sugarShaker.tabs.props.autoPlay){
 
-                    var tabs = document.querySelectorAll('#tabs .tab'),
-                        activeTab = document.querySelectorAll('#tabs .active')[0],
-                        index = [].slice.call(document.querySelectorAll('#tabs .tab')).indexOf(activeTab),
-                        newIndex = index + 1;
+                    if(!document.getElementById('tabs-content').classList.contains('hovering')){
 
-                    if(newIndex === tabs.length){
-                        newIndex = 0;
+                        var tabs = document.querySelectorAll('#tabs .tab'),
+                            activeTab = document.querySelectorAll('#tabs .active')[0],
+                            index = [].slice.call(document.querySelectorAll('#tabs .tab')).indexOf(activeTab),
+                            newIndex = index + 1;
+
+                        if(newIndex === tabs.length){
+                            newIndex = 0;
+                        }
+
+                        document.querySelectorAll('#tabs .active')[0].classList.remove('active');
+                        document.querySelectorAll('#tabs .tab')[newIndex].classList.add('active');
+
+                        utils.hide(document.querySelectorAll('#tabs-content .active')[0]);
+                        var delay = setTimeout(function () {
+                            utils.show(document.querySelectorAll('#tabs-content .tab-content')[newIndex]);
+                            clearTimeout(delay);
+                        }, 250);
                     }
 
-                    document.querySelectorAll('#tabs .active')[0].classList.remove('active');
-                    document.querySelectorAll('#tabs .tab')[newIndex].classList.add('active');
-
-                    utils.hide(document.querySelectorAll('#tabs-content .active')[0]);
-                    var delay = setTimeout(function () {
-                        utils.show(document.querySelectorAll('#tabs-content .tab-content')[newIndex]);
-                        clearTimeout(delay)
-                    }, 250)
-
                 } else {
-                    clearInterval(loop)
+                    clearInterval(loop);
                 }
-            }, 7000)
+            }, 7000);
         },
 
         init: function () {
@@ -109,8 +126,8 @@ DomReady.ready(function() {
                             utils.hide(document.querySelectorAll('#tabs-content .active')[0]);
                             var delay = setTimeout(function () {
                                 utils.show(document.getElementById(contentID));
-                                clearTimeout(delay)
-                            }, 250)
+                                clearTimeout(delay);
+                            }, 250);
                         }
 
                         sugarShaker.tabs.props.autoPlay = false;
@@ -121,7 +138,7 @@ DomReady.ready(function() {
                     };
                 }
 
-                sugarShaker.tabs.autoPlay();
+                sugarShaker.tabs.startAutoPlay();
             }
         }
     };
@@ -171,7 +188,7 @@ DomReady.ready(function() {
                     if(sugarShaker.contact.props.error){
                         event.preventDefault();
                     }
-                })
+                });
             }
         }
     };
@@ -227,7 +244,7 @@ DomReady.ready(function() {
 
         resize: function () {
             if(sugarShaker.navigation.el && sugarShaker.navigation.el.classList.contains('show')){
-                sugarShaker.navigation.hide()
+                sugarShaker.navigation.hide();
             }
         }
     };
@@ -243,9 +260,10 @@ DomReady.ready(function() {
                     imagesArr = [];
 
                 for(var t=0; t<thumbs.length; t++){
+
                     thumbs[t].addEventListener('click', function (e) {
                         e.preventDefault();
-                        var link = e.target['parentNode'];
+                        var link = e.target.parentNode;
                         if(!link.classList.contains('active')){
                             document.querySelectorAll('.gallery-images .active')[0].classList.remove('active');
                             link.classList.add('active');
@@ -269,7 +287,7 @@ DomReady.ready(function() {
 
     sugarShaker.contact.init();
 
-    window['onresize'] = function() {
+    window.onresize = function() {
 
         var newWidth = window.innerWidth,
             oldWidth = props.screenWidth;
