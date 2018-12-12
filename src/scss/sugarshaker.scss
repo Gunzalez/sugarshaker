@@ -3,7 +3,7 @@
 @import "mixins";
 @import "form";
 
-$borerLine:     2px solid lighten($brand-grey, 65%);
+$borerLine:     1px solid lighten($brand-grey, 65%);
 
 .page {
     max-width: 1220px;
@@ -616,7 +616,6 @@ strong {
     &:active {
         transform: scale(0.95);
         background-color: $brand-black;
-
     }
 }
 
