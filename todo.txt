@@ -2,9 +2,7 @@
 
 TODO
 =============================
-Header background animation - Needs Doyle for input and assets
 Find photo and content for me
-Overflow no scroll on mobile devices
 
 
 
@@ -14,8 +12,7 @@ Overflow no scroll on mobile devices
 
 DOING
 ==============================
-Home page logo list (animated)
-UL list items showing (IE) (bug)
+Overflow no scroll on mobile devices
 
 
 
@@ -25,7 +22,10 @@ UL list items showing (IE) (bug)
 
 DONE
 =============================
+UL list items showing (IE) (bug)
+Home page logo list (animated no longer)
 autoPlay carousel
+Header background animation
 Form validation JS
 Restyling header/sticky etc
 Horizontal Lines on desktop

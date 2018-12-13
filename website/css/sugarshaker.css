@@ -78,7 +78,7 @@ h5 {
   font-size: 17px; }
 
 p {
-  line-height: 120%;
+  line-height: 130%;
   padding-bottom: 15px; }
 
 a {
@@ -311,6 +311,10 @@ form {
       padding: 0; }
       .header-text .slogan {
         text-align: left; } }
+
+.detail-divider {
+  border-top: 1px solid #eaeaea;
+  padding-top: 20px; }
 
 @media (min-width: 992px) {
   .header,
@@ -647,7 +651,8 @@ strong {
     padding-bottom: 10px; }
 
 .title {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 10px; }
 
 .page-detail .imagery {
   padding: 10px 0;
@@ -666,14 +671,20 @@ strong {
     background-position: -6px 6px; }
     .page-detail .detail-row .copy.service .heading {
       padding: 12px 0 18px 50px; }
-    @media (min-width: 992px) {
+    @media (min-width: 576px) {
       .page-detail .detail-row .copy.service {
-        width: 350px;
         background-size: auto;
         background-position: -20px -20px;
-        padding-left: 115px; }
+        padding-left: 115px;
+        margin-bottom: 30px; }
         .page-detail .detail-row .copy.service .heading {
           padding: 0 0 12px 0; } }
+    @media (min-width: 992px) {
+      .page-detail .detail-row .copy.service {
+        width: 40%; } }
+    @media (min-width: 1200px) {
+      .page-detail .detail-row .copy.service {
+        width: 30%; } }
     .page-detail .detail-row .copy.service#service-1 {
       background-image: url("../images/services/service-eye.png"); }
     .page-detail .detail-row .copy.service#service-2 {
@@ -937,13 +948,17 @@ blockquote {
 
 .green-dots {
   list-style: none; }
-  .green-dots li::before {
-    content: "\2022";
-    color: #27893e;
-    font-weight: bold;
-    display: inline-block;
-    width: 1.8em;
-    margin-left: -1.8em; }
+  .green-dots li {
+    position: relative; }
+    .green-dots li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #27893e;
+      position: absolute;
+      left: -18px;
+      top: 5px; }
 
 .client-logos {
   border-bottom: 1px solid #eaeaea;

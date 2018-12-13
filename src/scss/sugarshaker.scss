@@ -147,6 +147,11 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
     }
 }
 
+.detail-divider {
+    border-top: $borerLine;
+    padding-top: 20px;
+}
+
 @media (min-width: $breakpoint3){
 
     .header,
@@ -643,6 +648,7 @@ strong {
 
 .title {
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .page-detail {
@@ -673,15 +679,23 @@ strong {
                     padding: 12px 0 18px 50px;
                 }
 
-                @media (min-width: $breakpoint3){
-                    width: 350px;
+                @media (min-width: $breakpoint1){
                     background-size: auto;
                     background-position: -20px -20px;
                     padding-left: 115px;
+                    margin-bottom: 30px;
 
                     .heading {
                         padding: 0 0 12px 0;
                     }
+                }
+
+                @media (min-width: $breakpoint3){
+                    width: 40%;
+                }
+
+                @media (min-width: $breakpoint5){
+                    width: 30%;
                 }
 
                 &#service-1 {
@@ -1102,13 +1116,17 @@ blockquote {
     list-style: none;
 
     li {
+        position: relative;
+
         &::before {
-            content: "\2022";
-            color: $brand-green;
-            font-weight: bold;
-            display: inline-block;
-            width: 1.8em;
-            margin-left: -1.8em;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $brand-green;
+            position: absolute;
+            left: -18px;
+            top: 5px;
         }
     }
 }
