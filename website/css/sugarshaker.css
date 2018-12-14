@@ -607,6 +607,9 @@ form {
 strong {
   font-weight: 400; }
 
+.cta {
+  text-align: center; }
+
 .btn {
   background-color: #27893e;
   color: white;
@@ -624,7 +627,7 @@ strong {
   border: none;
   cursor: pointer;
   transition: transform 250ms, background 500ms; }
-  @media (min-width: 992px) {
+  @media (min-width: 576px) {
     .btn {
       width: auto; } }
   .btn:hover {

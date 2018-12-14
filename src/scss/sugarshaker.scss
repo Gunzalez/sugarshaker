@@ -592,6 +592,10 @@ strong {
     font-weight: 400;
 }
 
+.cta {
+    text-align: center;
+}
+
 .btn {
     background-color: $brand-green;
     color: white;
@@ -610,7 +614,7 @@ strong {
     cursor: pointer;
     transition: transform 250ms, background 500ms;
 
-    @media (min-width: $breakpoint3){
+    @media (min-width: $breakpoint1){
         width: auto;
     }
 
