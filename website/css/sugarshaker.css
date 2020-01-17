@@ -217,7 +217,7 @@ form {
         margin-top: 0; } }
 
 .page {
-  max-width: 1220px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -269,6 +269,8 @@ form {
 .header {
   padding-top: 20px;
   width: 100%;
+  max-width: 1222px;
+  margin: 0 auto;
   top: 0; }
   .header.smaller {
     -webkit-box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.16);
@@ -407,7 +409,9 @@ form {
       width: 250px; } }
 
 .content {
-  padding: 0 20px; }
+  padding: 0 20px;
+  max-width: 1222px;
+  margin: 0 auto; }
   @media (min-width: 992px) {
     .content {
       padding: 0 40px; } }

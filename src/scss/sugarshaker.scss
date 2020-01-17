@@ -6,7 +6,7 @@
 $borerLine:     1px solid lighten($brand-grey, 65%);
 
 .page {
-    max-width: 1220px;
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -72,6 +72,8 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
 .header {
     padding-top: 20px;
     width: 100%;
+    max-width: 1222px;
+    margin: 0 auto;
     top: 0;
 
     &.smaller {
@@ -283,6 +285,8 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
 
 .content {
     padding: 0 20px;
+    max-width: 1222px;
+    margin: 0 auto;
 
     @media (min-width: $breakpoint3) {
         padding: 0 40px;
