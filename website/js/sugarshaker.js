@@ -280,6 +280,32 @@ DomReady.ready(function() {
         }
     };
 
+    sugarShaker.cosmetics = {
+
+        els: {
+            map: document.getElementById('the-map'),
+            graph: document.getElementById('the-graph')
+        },
+
+        init: function(){
+            var positionTreshold = 400;
+            
+            window.addEventListener('scroll', function(e) {
+
+                var $map = sugarShaker.cosmetics.els.map;
+                var $graph = sugarShaker.cosmetics.els.graph;
+
+                if($map.getBoundingClientRect().top < positionTreshold){
+                    $map.classList.remove('faded');
+                }
+                
+                if($graph.getBoundingClientRect().top < positionTreshold){
+                    $graph.classList.remove('faded');
+                }
+            });
+        }
+    };
+
     sugarShaker.pageBackground = {
 
         el: document.querySelectorAll('.page')[0],
@@ -357,6 +383,8 @@ DomReady.ready(function() {
     sugarShaker.tabs.init();
 
     sugarShaker.contact.init();
+
+    sugarShaker.cosmetics.init();
 
     window.onresize = function() {
 

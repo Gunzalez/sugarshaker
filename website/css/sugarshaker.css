@@ -253,6 +253,18 @@ form {
   padding: 0;
   line-height: 130%; }
 
+#the-map, #the-graph {
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
+
+#the-map.faded {
+  opacity: 0;
+  transform: translateX(-100px); }
+
+#the-graph.faded {
+  opacity: 0;
+  transform: translateX(100px); }
+
 .fixed .header {
   position: fixed;
   z-index: 10; }
@@ -498,7 +510,7 @@ form {
           left: 0;
           background: #27893e; }
   .tabs-section .tabs-content {
-    height: 340px;
+    height: 350px;
     overflow: hidden;
     position: relative; }
     .tabs-section .tabs-content .tab-content {

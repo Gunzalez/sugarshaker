@@ -46,6 +46,26 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
     line-height: 130%;
 }
 
+#the-map, #the-graph {
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+#the-map {
+    &.faded {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+#the-graph {
+    &.faded {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+
 .fixed {
 
     .header {
@@ -412,7 +432,7 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
     }
 
     .tabs-content {
-        height: 340px;
+        height: 350px;
         overflow: hidden;
         position: relative;
 
