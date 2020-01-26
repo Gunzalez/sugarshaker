@@ -383,6 +383,9 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
 
 .tabs-section {
     margin-bottom: 30px;
+    max-width: 992px;
+    margin-right: auto;
+    margin-left: auto;
 
     .tabs {
         margin: 0;
@@ -555,12 +558,12 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
         }
 
         .tabs-content {
-            height: 434px;
+            height: 454px;
             margin: 0 -40px;
 
             .tab-content {
                 padding: 30px 40px;
-                height: 434px;
+                height: 454px;
                 background-repeat: no-repeat;
                 background-position: -260px 0;
 
@@ -591,18 +594,18 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
             border-top: $borerLine;
             border-bottom: $borerLine;
             padding: 60px 30px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            min-height: 350px;
+            min-height: 400px;
 
             .title {
                 padding-bottom: 20px;
             }
 
             .copy {
-                padding-left: 240px;
-                padding-right: 70px;
+                padding-left: 380px;
+
+                .btn {
+                    margin-top: 15px;
+                }
             }
         }
     }
@@ -614,10 +617,6 @@ $borerLine:     1px solid lighten($brand-grey, 65%);
 
 strong {
     font-weight: 400;
-}
-
-.cta {
-    text-align: center;
 }
 
 .btn {

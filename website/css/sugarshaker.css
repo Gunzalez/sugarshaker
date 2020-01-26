@@ -473,7 +473,10 @@ form {
         padding: 0 10px; } }
 
 .tabs-section {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  max-width: 992px;
+  margin-right: auto;
+  margin-left: auto; }
   .tabs-section .tabs {
     margin: 0;
     padding: 0;
@@ -586,11 +589,11 @@ form {
             left: 0;
             background: #27893e; }
       .tabs-section .tabs-content {
-        height: 434px;
+        height: 454px;
         margin: 0 -40px; }
         .tabs-section .tabs-content .tab-content {
           padding: 30px 40px;
-          height: 434px;
+          height: 454px;
           background-repeat: no-repeat;
           background-position: -260px 0; }
           .tabs-section .tabs-content .tab-content#design {
@@ -607,24 +610,19 @@ form {
         border-top: 1px solid #eaeaea;
         border-bottom: 1px solid #eaeaea;
         padding: 60px 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        min-height: 350px; }
+        min-height: 400px; }
         .tabs-section .tab-box .title {
           padding-bottom: 20px; }
         .tabs-section .tab-box .copy {
-          padding-left: 240px;
-          padding-right: 70px; } }
+          padding-left: 380px; }
+          .tabs-section .tab-box .copy .btn {
+            margin-top: 15px; } }
 
 .bold {
   font-weight: bold; }
 
 strong {
   font-weight: 400; }
-
-.cta {
-  text-align: center; }
 
 .btn {
   background-color: #27893e;
