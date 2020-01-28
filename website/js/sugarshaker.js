@@ -295,13 +295,16 @@ DomReady.ready(function() {
                 var $map = sugarShaker.cosmetics.els.map;
                 var $graph = sugarShaker.cosmetics.els.graph;
 
-                if($map.getBoundingClientRect().top < positionTreshold){
-                    $map.classList.remove('faded');
+                if($map && $graph){
+                    if($map.getBoundingClientRect().top < positionTreshold){
+                        $map.classList.remove('faded');
+                    }
+                    
+                    if($graph.getBoundingClientRect().top < (positionTreshold + 100)){
+                        $graph.classList.remove('faded');
+                    }
                 }
-                
-                if($graph.getBoundingClientRect().top < positionTreshold){
-                    $graph.classList.remove('faded');
-                }
+
             });
         }
     };
