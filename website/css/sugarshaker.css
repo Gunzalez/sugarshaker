@@ -760,7 +760,9 @@ strong {
       .footer li a:hover {
         color: #262825; }
   .footer .footer-inner {
-    border-top: 1px solid #eaeaea; }
+    border-top: 1px solid #eaeaea;
+    max-width: 1220px;
+    margin: 0 auto; }
   @media (min-width: 992px) {
     .footer {
       padding: 0 40px 40px;
